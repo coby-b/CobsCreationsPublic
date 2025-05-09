@@ -1,0 +1,26 @@
+{
+	"title": "sceneTemplate",
+	"type": "object",
+	"properties": {
+		"sceneName": { "type": "string" },
+		"entities": {
+			"type": "array",
+			"items": { "$ref": "#/definitions/entity" }
+		}
+	},
+	"required": ["sceneName","entities"],
+	"definitions": {
+		"entity": {
+		"type": "object",
+		"properties": {
+			"template":   { "type": "string" },
+			"x":          { "type": "number" },
+			"y":          { "type": "number" },
+			"rotation":   { "type": "number", "default": 0 },
+			"script"  :   { "type": "string" },
+			"flags":      { "type": "integer", "default": 0}
+		},
+		"required": ["template","x","y"]
+		}
+	}
+}

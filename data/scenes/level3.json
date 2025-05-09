@@ -1,0 +1,149 @@
+{
+	"sceneName": "Level 3",
+	"entities": [
+	{
+		"template": "background",
+		"x": 0,
+		"y": 0
+	},
+	{
+		"template": "player",
+		"x": 600,
+		"y": 400,
+		"script": "playerscript",
+		"flags": 31
+	},
+	{
+		"template": "aliens",
+		"x": 200,
+		"y": 150,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 5
+	}
+    ,
+	{
+		"template": "aliens",
+		"x": 2,
+		"y": 150,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 3
+	}
+    ,
+	{
+		"template": "aliens",
+		"x": 30,
+		"y": 10,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 5
+	}
+    ,
+	{
+		"template": "aliens",
+		"x": 600,
+		"y": 700,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 1
+	}
+    ,
+	{
+		"template": "aliens",
+		"x": 700,
+		"y": 700,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 3
+	},
+	{
+		"template": "aliens",
+		"x": 200,
+		"y": 150,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 5
+	}
+    ,
+	{
+		"template": "aliens",
+		"x": 2,
+		"y": 150,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 3
+	}
+    ,
+	{
+		"template": "aliens",
+		"x": 30,
+		"y": 10,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 5
+	}
+    ,
+	{
+		"template": "aliens",
+		"x": 600,
+		"y": 700,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 1
+	}
+    ,
+	{
+		"template": "aliens",
+		"x": 700,
+		"y": 700,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 3
+	},
+	{
+		"template": "aliens",
+		"x": 200,
+		"y": 150,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 5
+	}
+    ,
+	{
+		"template": "aliens",
+		"x": 2,
+		"y": 150,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 3
+	}
+    ,
+	{
+		"template": "aliens",
+		"x": 30,
+		"y": 10,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 5
+	}
+    ,
+	{
+		"template": "aliens",
+		"x": 600,
+		"y": 700,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 1
+	}
+    ,
+	{
+		"template": "aliens",
+		"x": 700,
+		"y": 700,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 3
+	}
+	]
+}

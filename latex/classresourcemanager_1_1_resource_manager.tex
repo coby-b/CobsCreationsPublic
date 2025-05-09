@@ -1,0 +1,54 @@
+\doxysection{resourcemanager\+::Resource\+Manager Class Reference}
+\hypertarget{classresourcemanager_1_1_resource_manager}{}\label{classresourcemanager_1_1_resource_manager}\index{resourcemanager::ResourceManager@{resourcemanager::ResourceManager}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classresourcemanager_1_1_resource_manager_aaf82b90467b6ee3ce7d0ac4da61d32db}{this}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\item 
+Sprite \mbox{\hyperlink{classresourcemanager_1_1_resource_manager_aa148cd0a0b82c1753a53fbb919915bbb}{get\+Texture}} (string name)
+\item 
+Sprite \mbox{\hyperlink{classresourcemanager_1_1_resource_manager_a034996a85ab17ded0a71dd23135e177a}{load\+Texture}} (string name, string image, string data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classresourcemanager_1_1_resource_manager}{Resource\+Manager}} \mbox{\hyperlink{classresourcemanager_1_1_resource_manager_a6357791d1e115cc00c63e7a465c2b057}{get\+Instance}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{classresourcemanager_1_1_resource_manager}{Resource\+Manager} Singleton that caches Sprites by name 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classresourcemanager_1_1_resource_manager_aaf82b90467b6ee3ce7d0ac4da61d32db}\index{resourcemanager::ResourceManager@{resourcemanager::ResourceManager}!this@{this}}
+\index{this@{this}!resourcemanager::ResourceManager@{resourcemanager::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{classresourcemanager_1_1_resource_manager_aaf82b90467b6ee3ce7d0ac4da61d32db} 
+resourcemanager\+::\+Resource\+Manager\+::this (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Private Constructor Params\+: renderer = SDL renderer 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classresourcemanager_1_1_resource_manager_a6357791d1e115cc00c63e7a465c2b057}\index{resourcemanager::ResourceManager@{resourcemanager::ResourceManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!resourcemanager::ResourceManager@{resourcemanager::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \label{classresourcemanager_1_1_resource_manager_a6357791d1e115cc00c63e7a465c2b057} 
+static \mbox{\hyperlink{classresourcemanager_1_1_resource_manager}{Resource\+Manager}} resourcemanager\+::\+Resource\+Manager\+::get\+Instance (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Get or create the singleton Params\+: renderer = SDL renderer Returns\+: \doxylink{classresourcemanager_1_1_resource_manager}{Resource\+Manager} instance \Hypertarget{classresourcemanager_1_1_resource_manager_aa148cd0a0b82c1753a53fbb919915bbb}\index{resourcemanager::ResourceManager@{resourcemanager::ResourceManager}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!resourcemanager::ResourceManager@{resourcemanager::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily \label{classresourcemanager_1_1_resource_manager_aa148cd0a0b82c1753a53fbb919915bbb} 
+Sprite resourcemanager\+::\+Resource\+Manager\+::get\+Texture (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieve an already loaded Sprite Params\+: name = Template name Returns\+: Sprite or null \Hypertarget{classresourcemanager_1_1_resource_manager_a034996a85ab17ded0a71dd23135e177a}\index{resourcemanager::ResourceManager@{resourcemanager::ResourceManager}!loadTexture@{loadTexture}}
+\index{loadTexture@{loadTexture}!resourcemanager::ResourceManager@{resourcemanager::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{loadTexture()}{loadTexture()}}
+{\footnotesize\ttfamily \label{classresourcemanager_1_1_resource_manager_a034996a85ab17ded0a71dd23135e177a} 
+Sprite resourcemanager\+::\+Resource\+Manager\+::load\+Texture (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{string}]{image}{, }\item[{string}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Load a new Sprite if needed Params\+: name = Template name image = Bitmap path data = JSON metadata path Returns\+: The loaded Sprite 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/resourcemanager.\+d\end{DoxyCompactItemize}

@@ -1,0 +1,1 @@
+{"sceneName":"customLevel","entities":[{"template":"background","x":0,"y":0,"rotation":0},{"template":"player","x":674,"y":258,"rotation":0,"flags":21},{"template":"aliens","x":45,"y":51,"rotation":0,"flags":1},{"template":"aliens","x":976,"y":57,"rotation":0,"flags":2},{"template":"aliens","x":1125,"y":52,"rotation":0,"flags":2}]}

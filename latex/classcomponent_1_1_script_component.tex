@@ -1,0 +1,57 @@
+\doxysection{component\+::Script\+Component Class Reference}
+\hypertarget{classcomponent_1_1_script_component}{}\label{classcomponent_1_1_script_component}\index{component::ScriptComponent@{component::ScriptComponent}}
+Inheritance diagram for component\+::Script\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcomponent_1_1_script_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcomponent_1_1_script_component_a019750387dc4525e3eb2aee3bb2781fa}{update}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{classcomponent_1_1_script_component_a65215710fef706733d52041b7f01e383}{input}} (SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}event, float delta\+Time)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcomponent_1_1_transform_component}{Transform\+Component}} \mbox{\hyperlink{classcomponent_1_1_script_component_a7cf4c3c73b24cb16610082788ee505d1}{m\+Transform\+Ref}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classcomponent_1_1_i_component}{component\+::\+IComponent}}}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object {\bfseries m\+Owner}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class \doxylink{classcomponent_1_1_script_component}{Script\+Component} Base for Game\+Object behavior scripts 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcomponent_1_1_script_component_a65215710fef706733d52041b7f01e383}\index{component::ScriptComponent@{component::ScriptComponent}!input@{input}}
+\index{input@{input}!component::ScriptComponent@{component::ScriptComponent}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily \label{classcomponent_1_1_script_component_a65215710fef706733d52041b7f01e383} 
+void component\+::\+Script\+Component\+::input (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}}]{event}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Handle per-\/event input Params\+: event = SDL\+\_\+\+Event pointer delta\+Time = Time since last frame in seconds \Hypertarget{classcomponent_1_1_script_component_a019750387dc4525e3eb2aee3bb2781fa}\index{component::ScriptComponent@{component::ScriptComponent}!update@{update}}
+\index{update@{update}!component::ScriptComponent@{component::ScriptComponent}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classcomponent_1_1_script_component_a019750387dc4525e3eb2aee3bb2781fa} 
+void component\+::\+Script\+Component\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Update behavior each frame Params\+: delta\+Time = Time since last frame in seconds 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcomponent_1_1_script_component_a7cf4c3c73b24cb16610082788ee505d1}\index{component::ScriptComponent@{component::ScriptComponent}!mTransformRef@{mTransformRef}}
+\index{mTransformRef@{mTransformRef}!component::ScriptComponent@{component::ScriptComponent}}
+\doxysubsubsection{\texorpdfstring{mTransformRef}{mTransformRef}}
+{\footnotesize\ttfamily \label{classcomponent_1_1_script_component_a7cf4c3c73b24cb16610082788ee505d1} 
+\mbox{\hyperlink{classcomponent_1_1_transform_component}{Transform\+Component}} component\+::\+Script\+Component\+::m\+Transform\+Ref}
+
+Reference to transform component 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/component.\+d\end{DoxyCompactItemize}

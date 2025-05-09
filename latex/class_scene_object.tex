@@ -1,0 +1,65 @@
+\doxysection{Scene\+Object Class Reference}
+\hypertarget{class_scene_object}{}\label{class_scene_object}\index{SceneObject@{SceneObject}}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_object_a80632fd744c886975e97d2e5b71ae61b}{this}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} Obj)
+\item 
+void \mbox{\hyperlink{class_scene_object_aa56d0c51256a1a8ba02340aac6fed54f}{add\+Child}} (\mbox{\hyperlink{class_scene_object}{Scene\+Object}} child)
+\item 
+void \mbox{\hyperlink{class_scene_object_aab43d427c7413db0a37174fb5107cb4d}{traverse}} (void delegate(\mbox{\hyperlink{class_game_object}{Game\+Object}}) func)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \mbox{\hyperlink{class_scene_object_a28498a5282c462fb7a90512941416482}{obj}}
+\item 
+\mbox{\hyperlink{class_scene_object}{Scene\+Object}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_scene_object_a7ff843c33a2a38ed7bd3ec12345108d0}{children}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{class_scene_object}{Scene\+Object} Wraps a \doxylink{class_game_object}{Game\+Object} and its child nodes for scene hierarchy 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_scene_object_a80632fd744c886975e97d2e5b71ae61b}\index{SceneObject@{SceneObject}!this@{this}}
+\index{this@{this}!SceneObject@{SceneObject}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{class_scene_object_a80632fd744c886975e97d2e5b71ae61b} 
+Scene\+Object\+::this (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}}}]{Obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Construct a \doxylink{class_scene_object}{Scene\+Object} wrapper Params\+: Obj = \doxylink{class_game_object}{Game\+Object} to wrap 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_scene_object_aa56d0c51256a1a8ba02340aac6fed54f}\index{SceneObject@{SceneObject}!addChild@{addChild}}
+\index{addChild@{addChild}!SceneObject@{SceneObject}}
+\doxysubsubsection{\texorpdfstring{addChild()}{addChild()}}
+{\footnotesize\ttfamily \label{class_scene_object_aa56d0c51256a1a8ba02340aac6fed54f} 
+void Scene\+Object\+::add\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene_object}{Scene\+Object}}}]{child}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Add a child node to this \doxylink{class_scene_object}{Scene\+Object} Params\+: child = \doxylink{class_scene_object}{Scene\+Object} to add as a child \Hypertarget{class_scene_object_aab43d427c7413db0a37174fb5107cb4d}\index{SceneObject@{SceneObject}!traverse@{traverse}}
+\index{traverse@{traverse}!SceneObject@{SceneObject}}
+\doxysubsubsection{\texorpdfstring{traverse()}{traverse()}}
+{\footnotesize\ttfamily \label{class_scene_object_aab43d427c7413db0a37174fb5107cb4d} 
+void Scene\+Object\+::traverse (\begin{DoxyParamCaption}\item[{void delegate(\mbox{\hyperlink{class_game_object}{Game\+Object}})}]{func}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Traverse this node and all descendants in depth‐first order Params\+: func = Delegate to invoke for each non-\/null \doxylink{class_game_object}{Game\+Object} 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_scene_object_a7ff843c33a2a38ed7bd3ec12345108d0}\index{SceneObject@{SceneObject}!children@{children}}
+\index{children@{children}!SceneObject@{SceneObject}}
+\doxysubsubsection{\texorpdfstring{children}{children}}
+{\footnotesize\ttfamily \label{class_scene_object_a7ff843c33a2a38ed7bd3ec12345108d0} 
+\mbox{\hyperlink{class_scene_object}{Scene\+Object}} \mbox{[}$\,$\mbox{]} Scene\+Object\+::children\hspace{0.3cm}{\ttfamily [private]}}
+
+Child \doxylink{class_scene_object}{Scene\+Object} nodes \Hypertarget{class_scene_object_a28498a5282c462fb7a90512941416482}\index{SceneObject@{SceneObject}!obj@{obj}}
+\index{obj@{obj}!SceneObject@{SceneObject}}
+\doxysubsubsection{\texorpdfstring{obj}{obj}}
+{\footnotesize\ttfamily \label{class_scene_object_a28498a5282c462fb7a90512941416482} 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} Scene\+Object\+::obj\hspace{0.3cm}{\ttfamily [private]}}
+
+The associated \doxylink{class_game_object}{Game\+Object} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{scenetree_8d}{scenetree.\+d}}\end{DoxyCompactItemize}

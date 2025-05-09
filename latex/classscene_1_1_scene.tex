@@ -1,0 +1,107 @@
+\doxysection{scene\+::Scene Class Reference}
+\hypertarget{classscene_1_1_scene}{}\label{classscene_1_1_scene}\index{scene::Scene@{scene::Scene}}
+Inheritance diagram for scene\+::Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classscene_1_1_scene}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classscene_1_1_scene_a64ebc475cbd1f74b53fa46e2cfe4d387}{this}} (Game\+Application g)
+\item 
+void \mbox{\hyperlink{classscene_1_1_scene_a3358d2e9fd4cd46aa397184e32c48a2d}{cleanup}} ()
+\item 
+abstract void \mbox{\hyperlink{classscene_1_1_scene_ad66c34d8683155bb95590b284082c055}{handle\+Event}} (SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}event, float delta\+Time)
+\item 
+abstract void \mbox{\hyperlink{classscene_1_1_scene_a60131f825961f1ca231bcf2b26c72b51}{update}} (float delta\+Time)
+\item 
+abstract void \mbox{\hyperlink{classscene_1_1_scene_a1c0c725ed20a4f8452536def42057193}{render}} (float delta\+Time)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Application \mbox{\hyperlink{classscene_1_1_scene_a345061ba429e6953434e70721d76da54}{game}}
+\item 
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classscene_1_1_scene_afbbe095b0d77e138ba71061b70c7188a}{m\+Renderer}}
+\item 
+Scene\+Tree \mbox{\hyperlink{classscene_1_1_scene_a2cdc8a98a9d0431683d2d27b705d6266}{scene\+Tree}} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{classscene_1_1_scene}{Scene} Base interface for input handling, updating \& rendering 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classscene_1_1_scene_a64ebc475cbd1f74b53fa46e2cfe4d387}\index{scene::Scene@{scene::Scene}!this@{this}}
+\index{this@{this}!scene::Scene@{scene::Scene}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{classscene_1_1_scene_a64ebc475cbd1f74b53fa46e2cfe4d387} 
+scene\+::\+Scene\+::this (\begin{DoxyParamCaption}\item[{Game\+Application}]{g}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct with application reference Params\+: g = Parent Game\+Application 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classscene_1_1_scene_a3358d2e9fd4cd46aa397184e32c48a2d}\index{scene::Scene@{scene::Scene}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!scene::Scene@{scene::Scene}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily \label{classscene_1_1_scene_a3358d2e9fd4cd46aa397184e32c48a2d} 
+void scene\+::\+Scene\+::cleanup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Clean up any resources \Hypertarget{classscene_1_1_scene_ad66c34d8683155bb95590b284082c055}\index{scene::Scene@{scene::Scene}!handleEvent@{handleEvent}}
+\index{handleEvent@{handleEvent}!scene::Scene@{scene::Scene}}
+\doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}}
+{\footnotesize\ttfamily \label{classscene_1_1_scene_ad66c34d8683155bb95590b284082c055} 
+abstract void scene\+::\+Scene\+::handle\+Event (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}}]{event}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Handle a single SDL\+\_\+\+Event Params\+: event = Pointer to SDL\+\_\+\+Event delta\+Time = Time since last frame in seconds 
+
+Implemented in \mbox{\hyperlink{classscene_1_1_editor_scene_a5138cc0d4a9b2dbd73c41ccaa785e63e}{scene\+::\+Editor\+Scene}}, \mbox{\hyperlink{classscene_1_1_game_scene_abed03a1ac856c1ec9348baf1fc30c573}{scene\+::\+Game\+Scene}}, and \mbox{\hyperlink{classscene_1_1_main_menu_ab9da5bc000accab2909b2f9a1eb092fe}{scene\+::\+Main\+Menu}}.
+
+\Hypertarget{classscene_1_1_scene_a1c0c725ed20a4f8452536def42057193}\index{scene::Scene@{scene::Scene}!render@{render}}
+\index{render@{render}!scene::Scene@{scene::Scene}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{classscene_1_1_scene_a1c0c725ed20a4f8452536def42057193} 
+abstract void scene\+::\+Scene\+::render (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Render scene to the screen Params\+: delta\+Time = Time since last frame in seconds 
+
+Implemented in \mbox{\hyperlink{classscene_1_1_editor_scene_abb634362348fa2a43ade66312da1b3cf}{scene\+::\+Editor\+Scene}}, \mbox{\hyperlink{classscene_1_1_game_scene_a5bb37b6071b3eb19a4f7091b459eca6f}{scene\+::\+Game\+Scene}}, and \mbox{\hyperlink{classscene_1_1_main_menu_a23fce1dbea8d1cf4d5276efc53cc3849}{scene\+::\+Main\+Menu}}.
+
+\Hypertarget{classscene_1_1_scene_a60131f825961f1ca231bcf2b26c72b51}\index{scene::Scene@{scene::Scene}!update@{update}}
+\index{update@{update}!scene::Scene@{scene::Scene}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classscene_1_1_scene_a60131f825961f1ca231bcf2b26c72b51} 
+abstract void scene\+::\+Scene\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Update scene logic Params\+: delta\+Time = Time since last frame in seconds 
+
+Implemented in \mbox{\hyperlink{classscene_1_1_editor_scene_a5e68358b5e9bc328f26c65c82963ecf8}{scene\+::\+Editor\+Scene}}, \mbox{\hyperlink{classscene_1_1_game_scene_a74adcde58aca0c6ff86a12b74500d60e}{scene\+::\+Game\+Scene}}, and \mbox{\hyperlink{classscene_1_1_main_menu_a1fa548931c1458d970bf8ad91ad1236d}{scene\+::\+Main\+Menu}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classscene_1_1_scene_a345061ba429e6953434e70721d76da54}\index{scene::Scene@{scene::Scene}!game@{game}}
+\index{game@{game}!scene::Scene@{scene::Scene}}
+\doxysubsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily \label{classscene_1_1_scene_a345061ba429e6953434e70721d76da54} 
+Game\+Application scene\+::\+Scene\+::game}
+
+Game Application back‐pointer \Hypertarget{classscene_1_1_scene_afbbe095b0d77e138ba71061b70c7188a}\index{scene::Scene@{scene::Scene}!mRenderer@{mRenderer}}
+\index{mRenderer@{mRenderer}!scene::Scene@{scene::Scene}}
+\doxysubsubsection{\texorpdfstring{mRenderer}{mRenderer}}
+{\footnotesize\ttfamily \label{classscene_1_1_scene_afbbe095b0d77e138ba71061b70c7188a} 
+SDL\+\_\+\+Renderer\texorpdfstring{$\ast$}{*} scene\+::\+Scene\+::m\+Renderer}
+
+Shared SDL renderer \Hypertarget{classscene_1_1_scene_a2cdc8a98a9d0431683d2d27b705d6266}\index{scene::Scene@{scene::Scene}!sceneTree@{sceneTree}}
+\index{sceneTree@{sceneTree}!scene::Scene@{scene::Scene}}
+\doxysubsubsection{\texorpdfstring{sceneTree}{sceneTree}}
+{\footnotesize\ttfamily \label{classscene_1_1_scene_a2cdc8a98a9d0431683d2d27b705d6266} 
+Scene\+Tree scene\+::\+Scene\+::scene\+Tree = null}
+
+Root of objects in this scene 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/scene.\+d\end{DoxyCompactItemize}

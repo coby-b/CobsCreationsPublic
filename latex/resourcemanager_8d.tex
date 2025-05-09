@@ -1,0 +1,92 @@
+\doxysection{source/resourcemanager.d File Reference}
+\hypertarget{resourcemanager_8d}{}\label{resourcemanager_8d}\index{source/resourcemanager.d@{source/resourcemanager.d}}
+{\ttfamily import sdl\+\_\+abstraction;}\newline
+{\ttfamily import bindbc.\+sdl;}\newline
+{\ttfamily import std.\+stdio;}\newline
+{\ttfamily import std.\+string;}\newline
+{\ttfamily import std.\+json;}\newline
+{\ttfamily import std.\+file;}\newline
+{\ttfamily import std.\+algorithm;}\newline
+{\ttfamily import std.\+array;}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_sprite}{Sprite}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{resourcemanager_8d_a82cfe0b76525e5afbef194d7a0fe8f9a}{this}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\item 
+\mbox{\hyperlink{resourcemanager_8d_a82bd52df216cb0ac423592280022cbcf}{\texorpdfstring{$\sim$}{\string~}this}} ()
+\item 
+static Resource\+Manager \mbox{\hyperlink{resourcemanager_8d_ab9a6cf50dfde97d4a57285bd8779fdd7}{get\+Instance}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\item 
+\mbox{\hyperlink{class_sprite}{Sprite}} \mbox{\hyperlink{resourcemanager_8d_a21f776528586e0325ef6f31b0fdf771b}{get\+Texture}} (string name)
+\item 
+\mbox{\hyperlink{class_sprite}{Sprite}} \mbox{\hyperlink{resourcemanager_8d_aaf369b86c9e020a237ec14a89a24c782}{load\+Texture}} (string name, string image, string data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_sprite}{Sprite}} \mbox{\hyperlink{resourcemanager_8d_ad9f854a79737c57966ac94ff2815bd8e}{\+\_\+instance}}
+\item 
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{resourcemanager_8d_abae280b5f6bda20a6e43e05b0ae100e0}{rm\+Renderer}}
+\item 
+\mbox{\hyperlink{class_sprite}{Sprite}}\mbox{[}string\mbox{]} \mbox{\hyperlink{resourcemanager_8d_af7adf8d708b64e0f6074e94b2548add4}{m\+Sprites}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{resourcemanager_8d_ab9a6cf50dfde97d4a57285bd8779fdd7}\index{resourcemanager.d@{resourcemanager.d}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!resourcemanager.d@{resourcemanager.d}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \label{resourcemanager_8d_ab9a6cf50dfde97d4a57285bd8779fdd7} 
+static Resource\+Manager get\+Instance (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Get or create the singleton Params\+: renderer = SDL renderer Returns\+: Resource\+Manager instance \Hypertarget{resourcemanager_8d_a21f776528586e0325ef6f31b0fdf771b}\index{resourcemanager.d@{resourcemanager.d}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!resourcemanager.d@{resourcemanager.d}}
+\doxysubsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily \label{resourcemanager_8d_a21f776528586e0325ef6f31b0fdf771b} 
+\mbox{\hyperlink{class_sprite}{Sprite}} get\+Texture (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Retrieve an already loaded \doxylink{class_sprite}{Sprite} Params\+: name = Template name Returns\+: \doxylink{class_sprite}{Sprite} or null \Hypertarget{resourcemanager_8d_aaf369b86c9e020a237ec14a89a24c782}\index{resourcemanager.d@{resourcemanager.d}!loadTexture@{loadTexture}}
+\index{loadTexture@{loadTexture}!resourcemanager.d@{resourcemanager.d}}
+\doxysubsubsection{\texorpdfstring{loadTexture()}{loadTexture()}}
+{\footnotesize\ttfamily \label{resourcemanager_8d_aaf369b86c9e020a237ec14a89a24c782} 
+\mbox{\hyperlink{class_sprite}{Sprite}} load\+Texture (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{string}]{image}{, }\item[{string}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Load a new \doxylink{class_sprite}{Sprite} if needed Params\+: name = Template name image = Bitmap path data = JSON metadata path Returns\+: The loaded \doxylink{class_sprite}{Sprite} \Hypertarget{resourcemanager_8d_a82cfe0b76525e5afbef194d7a0fe8f9a}\index{resourcemanager.d@{resourcemanager.d}!this@{this}}
+\index{this@{this}!resourcemanager.d@{resourcemanager.d}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{resourcemanager_8d_a82cfe0b76525e5afbef194d7a0fe8f9a} 
+this (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Private Constructor Params\+: renderer = SDL renderer \Hypertarget{resourcemanager_8d_a82bd52df216cb0ac423592280022cbcf}\index{resourcemanager.d@{resourcemanager.d}!````~this@{\texorpdfstring{$\sim$}{\string~}this}}
+\index{````~this@{\texorpdfstring{$\sim$}{\string~}this}!resourcemanager.d@{resourcemanager.d}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}this()}{\string~this()}}
+{\footnotesize\ttfamily \label{resourcemanager_8d_a82bd52df216cb0ac423592280022cbcf} 
+\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{component_8d_a11639adc3b65ee2c5ad60f319580c40a}{this}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{resourcemanager_8d_ad9f854a79737c57966ac94ff2815bd8e}\index{resourcemanager.d@{resourcemanager.d}!\_instance@{\_instance}}
+\index{\_instance@{\_instance}!resourcemanager.d@{resourcemanager.d}}
+\doxysubsubsection{\texorpdfstring{\_instance}{\_instance}}
+{\footnotesize\ttfamily \label{resourcemanager_8d_ad9f854a79737c57966ac94ff2815bd8e} 
+class \mbox{\hyperlink{class_sprite}{Sprite}} \+\_\+instance}
+
+Class Resource\+Manager Singleton that caches Sprites by name \Hypertarget{resourcemanager_8d_af7adf8d708b64e0f6074e94b2548add4}\index{resourcemanager.d@{resourcemanager.d}!mSprites@{mSprites}}
+\index{mSprites@{mSprites}!resourcemanager.d@{resourcemanager.d}}
+\doxysubsubsection{\texorpdfstring{mSprites}{mSprites}}
+{\footnotesize\ttfamily \label{resourcemanager_8d_af7adf8d708b64e0f6074e94b2548add4} 
+\mbox{\hyperlink{class_sprite}{Sprite}} \mbox{[}string\mbox{]} m\+Sprites\hspace{0.3cm}{\ttfamily [private]}}
+
+Name→\+Sprite cache \Hypertarget{resourcemanager_8d_abae280b5f6bda20a6e43e05b0ae100e0}\index{resourcemanager.d@{resourcemanager.d}!rmRenderer@{rmRenderer}}
+\index{rmRenderer@{rmRenderer}!resourcemanager.d@{resourcemanager.d}}
+\doxysubsubsection{\texorpdfstring{rmRenderer}{rmRenderer}}
+{\footnotesize\ttfamily \label{resourcemanager_8d_abae280b5f6bda20a6e43e05b0ae100e0} 
+SDL\+\_\+\+Renderer\texorpdfstring{$\ast$}{*} rm\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+Renderer used to create textures 

@@ -1,0 +1,201 @@
+\doxysection{source/component.d File Reference}
+\hypertarget{component_8d}{}\label{component_8d}\index{source/component.d@{source/component.d}}
+{\ttfamily import bindbc.\+sdl;}\newline
+{\ttfamily import std.\+stdio;}\newline
+{\ttfamily import std.\+string;}\newline
+{\ttfamily import std.\+algorithm;}\newline
+{\ttfamily import std.\+conv;}\newline
+{\ttfamily import std.\+array;}\newline
+{\ttfamily import std.\+file;}\newline
+{\ttfamily import std.\+json;}\newline
+{\ttfamily import resourcemanager;}\newline
+{\ttfamily import gameapplication;}\newline
+{\ttfamily import gameobject;}\newline
+{\ttfamily import vector;}\newline
+{\ttfamily import camera;}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_i_component}{IComponent}}
+\item 
+class \mbox{\hyperlink{class_texture_component}{Texture\+Component}}
+\item 
+class \mbox{\hyperlink{class_script_component}{Script\+Component}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{component_8d_a816abae20799c932d0551440bb397543}{COMPONENTS}} \{ \mbox{\hyperlink{component_8d_a816abae20799c932d0551440bb397543a3f07a311da6e3003d3922d665098da2d}{TEXTURE}}
+, \mbox{\hyperlink{component_8d_a816abae20799c932d0551440bb397543a25f73324dc93d9024c0c75b4e6815335}{TRANSFORM}}
+, \mbox{\hyperlink{component_8d_a816abae20799c932d0551440bb397543a541672d86250ec40ef179c0796d533b2}{TEXTURE\+\_\+\+ANIMATED}}
+, \mbox{\hyperlink{component_8d_a816abae20799c932d0551440bb397543a65154c0ec97cb74cba7359ca02c4ab54}{SCRIPT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{component_8d_a11639adc3b65ee2c5ad60f319580c40a}{this}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} owner, float x, float y, float w, float h)
+\item 
+\mbox{\hyperlink{component_8d_aba21bce0290175de787e8532972faa1d}{this}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} owner, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}r, string name)
+\item 
+void \mbox{\hyperlink{component_8d_a777c31c0ae92d40779b05917c43174d2}{Loop\+Animation\+Sequence}} (string name, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}r, float delta\+Time, \mbox{\hyperlink{class_camera}{Camera}} camera)
+\item 
+void \mbox{\hyperlink{component_8d_a4fcd7a2cefa3e309b45c06b5bcb3ffff}{render\+Non\+Animated}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}r, \mbox{\hyperlink{class_camera}{Camera}} camera)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+abstract class \mbox{\hyperlink{class_i_component}{IComponent}} \mbox{\hyperlink{component_8d_a1e78dc368a219c294766e46816837a86}{m\+Pos}}
+\item 
+\mbox{\hyperlink{structvec2d}{vec2d}} \mbox{\hyperlink{component_8d_af08e93bd23738f2cb0a416cb591947db}{m\+Size}}
+\item 
+float \mbox{\hyperlink{component_8d_a7768d5ba63e702c4e6a5a70e4b79512a}{rotation\+Angle}}
+\item 
+\mbox{\hyperlink{class_texture_component}{Texture\+Component}} \mbox{\hyperlink{component_8d_a278062fcfa5d6f484d730a6876efc277}{m\+Sprite}}
+\item 
+string \mbox{\hyperlink{component_8d_a190e8c961614fb2b51fab6d441c1fa11}{m\+Animation\+Name}}
+\item 
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{component_8d_a9b63fc74c30e4828a478c1855169ca7c}{m\+Renderer\+Ref}}
+\item 
+\mbox{\hyperlink{class_texture_component}{Texture\+Component}} \mbox{\hyperlink{component_8d_af7f316339db5524129723d3a4f6d40ee}{m\+Texture\+Ref}}
+\item 
+Transform\+Component \mbox{\hyperlink{component_8d_a1daffa08b2e89d4fa27c779c8708cfcb}{m\+Transform\+Ref}}
+\item 
+int \mbox{\hyperlink{component_8d_a039b04bef60d771d02b7178724c58811}{current\+Idx}}
+\item 
+bool \mbox{\hyperlink{component_8d_a347cbb6d04e87aa4c0991ef02d050f8a}{animating}}
+\item 
+float \mbox{\hyperlink{component_8d_a73a7a0f8eed4ce312ceb6443b4e07ae1}{frame\+Timer}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{component_8d_abb084f8c5a6711b5d17f254dde5abf7c}{frame\+Duration}} = 0.\+2f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{component_8d_a816abae20799c932d0551440bb397543}\index{component.d@{component.d}!COMPONENTS@{COMPONENTS}}
+\index{COMPONENTS@{COMPONENTS}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{COMPONENTS}{COMPONENTS}}
+{\footnotesize\ttfamily \label{component_8d_a816abae20799c932d0551440bb397543} 
+enum \mbox{\hyperlink{component_8d_a816abae20799c932d0551440bb397543}{COMPONENTS}}}
+
+Enum \doxylink{component_8d_a816abae20799c932d0551440bb397543}{COMPONENTS} Indices for \doxylink{class_game_object}{Game\+Object} component array \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXTURE@{TEXTURE}!component.d@{component.d}}\index{component.d@{component.d}!TEXTURE@{TEXTURE}}}\Hypertarget{component_8d_a816abae20799c932d0551440bb397543a3f07a311da6e3003d3922d665098da2d}\label{component_8d_a816abae20799c932d0551440bb397543a3f07a311da6e3003d3922d665098da2d} 
+TEXTURE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSFORM@{TRANSFORM}!component.d@{component.d}}\index{component.d@{component.d}!TRANSFORM@{TRANSFORM}}}\Hypertarget{component_8d_a816abae20799c932d0551440bb397543a25f73324dc93d9024c0c75b4e6815335}\label{component_8d_a816abae20799c932d0551440bb397543a25f73324dc93d9024c0c75b4e6815335} 
+TRANSFORM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXTURE\_ANIMATED@{TEXTURE\_ANIMATED}!component.d@{component.d}}\index{component.d@{component.d}!TEXTURE\_ANIMATED@{TEXTURE\_ANIMATED}}}\Hypertarget{component_8d_a816abae20799c932d0551440bb397543a541672d86250ec40ef179c0796d533b2}\label{component_8d_a816abae20799c932d0551440bb397543a541672d86250ec40ef179c0796d533b2} 
+TEXTURE\+\_\+\+ANIMATED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SCRIPT@{SCRIPT}!component.d@{component.d}}\index{component.d@{component.d}!SCRIPT@{SCRIPT}}}\Hypertarget{component_8d_a816abae20799c932d0551440bb397543a65154c0ec97cb74cba7359ca02c4ab54}\label{component_8d_a816abae20799c932d0551440bb397543a65154c0ec97cb74cba7359ca02c4ab54} 
+SCRIPT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{component_8d_a777c31c0ae92d40779b05917c43174d2}\index{component.d@{component.d}!LoopAnimationSequence@{LoopAnimationSequence}}
+\index{LoopAnimationSequence@{LoopAnimationSequence}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{LoopAnimationSequence()}{LoopAnimationSequence()}}
+{\footnotesize\ttfamily \label{component_8d_a777c31c0ae92d40779b05917c43174d2} 
+void Loop\+Animation\+Sequence (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{r}{, }\item[{float}]{delta\+Time}{, }\item[{\mbox{\hyperlink{class_camera}{Camera}}}]{camera}{}\end{DoxyParamCaption})}
+
+Loop and render an animation sequence Params\+: name = Sequence name (empty = current) r = SDL\+\_\+\+Renderer pointer delta\+Time = Time since last frame in seconds camera = \doxylink{class_camera}{Camera} for world→screen transform \Hypertarget{component_8d_a4fcd7a2cefa3e309b45c06b5bcb3ffff}\index{component.d@{component.d}!renderNonAnimated@{renderNonAnimated}}
+\index{renderNonAnimated@{renderNonAnimated}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{renderNonAnimated()}{renderNonAnimated()}}
+{\footnotesize\ttfamily \label{component_8d_a4fcd7a2cefa3e309b45c06b5bcb3ffff} 
+void render\+Non\+Animated (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{r}{, }\item[{\mbox{\hyperlink{class_camera}{Camera}}}]{camera}{}\end{DoxyParamCaption})}
+
+Render a static, non‑animated sprite Params\+: r = SDL\+\_\+\+Renderer pointer camera = \doxylink{class_camera}{Camera} for world→screen transform \Hypertarget{component_8d_a11639adc3b65ee2c5ad60f319580c40a}\index{component.d@{component.d}!this@{this}}
+\index{this@{this}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{component_8d_a11639adc3b65ee2c5ad60f319580c40a} 
+this (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}}}]{owner}{, }\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{w}{, }\item[{float}]{h}{}\end{DoxyParamCaption})}
+
+Construct a Transform\+Component Params\+: owner = \doxylink{class_game_object}{Game\+Object} owner x = Initial X position y = Initial Y position w = Width h = Height \Hypertarget{component_8d_aba21bce0290175de787e8532972faa1d}\index{component.d@{component.d}!this@{this}}
+\index{this@{this}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{component_8d_aba21bce0290175de787e8532972faa1d} 
+this (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}}}]{owner}{, }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{r}{, }\item[{string}]{name}{}\end{DoxyParamCaption})}
+
+Construct an Animation\+Component Params\+: owner = \doxylink{class_game_object}{Game\+Object} owner r = SDL\+\_\+\+Renderer pointer name = Resource key for sprite lookup 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{component_8d_a347cbb6d04e87aa4c0991ef02d050f8a}\index{component.d@{component.d}!animating@{animating}}
+\index{animating@{animating}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{animating}{animating}}
+{\footnotesize\ttfamily \label{component_8d_a347cbb6d04e87aa4c0991ef02d050f8a} 
+bool animating}
+
+Whether animation is active \Hypertarget{component_8d_a039b04bef60d771d02b7178724c58811}\index{component.d@{component.d}!currentIdx@{currentIdx}}
+\index{currentIdx@{currentIdx}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{currentIdx}{currentIdx}}
+{\footnotesize\ttfamily \label{component_8d_a039b04bef60d771d02b7178724c58811} 
+int current\+Idx}
+
+Current frame index in sequence \Hypertarget{component_8d_abb084f8c5a6711b5d17f254dde5abf7c}\index{component.d@{component.d}!frameDuration@{frameDuration}}
+\index{frameDuration@{frameDuration}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{frameDuration}{frameDuration}}
+{\footnotesize\ttfamily \label{component_8d_abb084f8c5a6711b5d17f254dde5abf7c} 
+float frame\+Duration = 0.\+2f}
+
+Seconds between frames \Hypertarget{component_8d_a73a7a0f8eed4ce312ceb6443b4e07ae1}\index{component.d@{component.d}!frameTimer@{frameTimer}}
+\index{frameTimer@{frameTimer}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{frameTimer}{frameTimer}}
+{\footnotesize\ttfamily \label{component_8d_a73a7a0f8eed4ce312ceb6443b4e07ae1} 
+float frame\+Timer = 0.\+0f}
+
+Timer accumulating delta\+Time \Hypertarget{component_8d_a190e8c961614fb2b51fab6d441c1fa11}\index{component.d@{component.d}!mAnimationName@{mAnimationName}}
+\index{mAnimationName@{mAnimationName}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{mAnimationName}{mAnimationName}}
+{\footnotesize\ttfamily \label{component_8d_a190e8c961614fb2b51fab6d441c1fa11} 
+string m\+Animation\+Name}
+
+Current animation sequence name \Hypertarget{component_8d_a1e78dc368a219c294766e46816837a86}\index{component.d@{component.d}!mPos@{mPos}}
+\index{mPos@{mPos}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{mPos}{mPos}}
+{\footnotesize\ttfamily \label{component_8d_a1e78dc368a219c294766e46816837a86} 
+abstract class \mbox{\hyperlink{class_i_component}{IComponent}} m\+Pos}
+
+Class Transform\+Component Stores world position, size, and rotation of an object World position \Hypertarget{component_8d_a9b63fc74c30e4828a478c1855169ca7c}\index{component.d@{component.d}!mRendererRef@{mRendererRef}}
+\index{mRendererRef@{mRendererRef}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{mRendererRef}{mRendererRef}}
+{\footnotesize\ttfamily \label{component_8d_a9b63fc74c30e4828a478c1855169ca7c} 
+SDL\+\_\+\+Renderer\texorpdfstring{$\ast$}{*} m\+Renderer\+Ref}
+
+SDL\+\_\+\+Renderer reference for drawing \Hypertarget{component_8d_af08e93bd23738f2cb0a416cb591947db}\index{component.d@{component.d}!mSize@{mSize}}
+\index{mSize@{mSize}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{mSize}{mSize}}
+{\footnotesize\ttfamily \label{component_8d_af08e93bd23738f2cb0a416cb591947db} 
+\mbox{\hyperlink{structvec2d}{vec2d}} m\+Size}
+
+World size \Hypertarget{component_8d_a278062fcfa5d6f484d730a6876efc277}\index{component.d@{component.d}!mSprite@{mSprite}}
+\index{mSprite@{mSprite}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{mSprite}{mSprite}}
+{\footnotesize\ttfamily \label{component_8d_a278062fcfa5d6f484d730a6876efc277} 
+\mbox{\hyperlink{class_texture_component}{Texture\+Component}} m\+Sprite}
+
+Class Animation\+Component Handles animated sprite playback using frame sequences \doxylink{class_sprite}{Sprite} containing frames and sequences \Hypertarget{component_8d_af7f316339db5524129723d3a4f6d40ee}\index{component.d@{component.d}!mTextureRef@{mTextureRef}}
+\index{mTextureRef@{mTextureRef}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{mTextureRef}{mTextureRef}}
+{\footnotesize\ttfamily \label{component_8d_af7f316339db5524129723d3a4f6d40ee} 
+\mbox{\hyperlink{class_texture_component}{Texture\+Component}} m\+Texture\+Ref}
+
+Reference to texture component \Hypertarget{component_8d_a1daffa08b2e89d4fa27c779c8708cfcb}\index{component.d@{component.d}!mTransformRef@{mTransformRef}}
+\index{mTransformRef@{mTransformRef}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{mTransformRef}{mTransformRef}}
+{\footnotesize\ttfamily \label{component_8d_a1daffa08b2e89d4fa27c779c8708cfcb} 
+Transform\+Component m\+Transform\+Ref}
+
+Reference to transform component \Hypertarget{component_8d_a7768d5ba63e702c4e6a5a70e4b79512a}\index{component.d@{component.d}!rotationAngle@{rotationAngle}}
+\index{rotationAngle@{rotationAngle}!component.d@{component.d}}
+\doxysubsubsection{\texorpdfstring{rotationAngle}{rotationAngle}}
+{\footnotesize\ttfamily \label{component_8d_a7768d5ba63e702c4e6a5a70e4b79512a} 
+float rotation\+Angle}
+
+Rotation angle in degrees 

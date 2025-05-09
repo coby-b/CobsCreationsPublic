@@ -1,0 +1,132 @@
+\doxysection{component\+::Animation\+Component Class Reference}
+\hypertarget{classcomponent_1_1_animation_component}{}\label{classcomponent_1_1_animation_component}\index{component::AnimationComponent@{component::AnimationComponent}}
+Inheritance diagram for component\+::Animation\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcomponent_1_1_animation_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcomponent_1_1_animation_component_a0e07c9a95d670480bfc2551cbdf4d6de}{this}} (Game\+Object owner, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}r, string name)
+\item 
+void \mbox{\hyperlink{classcomponent_1_1_animation_component_aba417badf824bc8565b50794ae4e42e9}{Loop\+Animation\+Sequence}} (string name, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}r, float delta\+Time, Camera camera)
+\item 
+void \mbox{\hyperlink{classcomponent_1_1_animation_component_ab6e7fb8196e76260e036cdda9f02f044}{render\+Non\+Animated}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}r, Camera camera)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Sprite \mbox{\hyperlink{classcomponent_1_1_animation_component_a92b02d3bae89dbc9ad589d3b16ea20bb}{m\+Sprite}}
+\item 
+string \mbox{\hyperlink{classcomponent_1_1_animation_component_aadf457944518278567941832b8d2b553}{m\+Animation\+Name}}
+\item 
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcomponent_1_1_animation_component_a78a34d2eaf567b55082b848a98b9d34e}{m\+Renderer\+Ref}}
+\item 
+\mbox{\hyperlink{classcomponent_1_1_texture_component}{Texture\+Component}} \mbox{\hyperlink{classcomponent_1_1_animation_component_a57cd9ad1d85f19341d04e4d71f64fe31}{m\+Texture\+Ref}}
+\item 
+\mbox{\hyperlink{classcomponent_1_1_transform_component}{Transform\+Component}} \mbox{\hyperlink{classcomponent_1_1_animation_component_af3c378efacfae1703706aa4d5fe87b72}{m\+Transform\+Ref}}
+\item 
+int \mbox{\hyperlink{classcomponent_1_1_animation_component_a85ade770b0c7b9099d3587338be2ecae}{current\+Idx}}
+\item 
+bool \mbox{\hyperlink{classcomponent_1_1_animation_component_a5635fea65ad99a3407499b871b90311d}{animating}}
+\item 
+float \mbox{\hyperlink{classcomponent_1_1_animation_component_ac098678035432de3cfeee87442846223}{frame\+Timer}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classcomponent_1_1_animation_component_aa6760e883decdd776936c6925e616f09}{frame\+Duration}} = 0.\+2f
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classcomponent_1_1_i_component}{component\+::\+IComponent}}}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object {\bfseries m\+Owner}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{classcomponent_1_1_animation_component}{Animation\+Component} Handles animated sprite playback using frame sequences 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcomponent_1_1_animation_component_a0e07c9a95d670480bfc2551cbdf4d6de}\index{component::AnimationComponent@{component::AnimationComponent}!this@{this}}
+\index{this@{this}!component::AnimationComponent@{component::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{classcomponent_1_1_animation_component_a0e07c9a95d670480bfc2551cbdf4d6de} 
+component\+::\+Animation\+Component\+::this (\begin{DoxyParamCaption}\item[{Game\+Object}]{owner}{, }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{r}{, }\item[{string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct an \doxylink{classcomponent_1_1_animation_component}{Animation\+Component} Params\+: owner = Game\+Object owner r = SDL\+\_\+\+Renderer pointer name = Resource key for sprite lookup 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcomponent_1_1_animation_component_aba417badf824bc8565b50794ae4e42e9}\index{component::AnimationComponent@{component::AnimationComponent}!LoopAnimationSequence@{LoopAnimationSequence}}
+\index{LoopAnimationSequence@{LoopAnimationSequence}!component::AnimationComponent@{component::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{LoopAnimationSequence()}{LoopAnimationSequence()}}
+{\footnotesize\ttfamily \label{classcomponent_1_1_animation_component_aba417badf824bc8565b50794ae4e42e9} 
+void component\+::\+Animation\+Component\+::\+Loop\+Animation\+Sequence (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{r}{, }\item[{float}]{delta\+Time}{, }\item[{Camera}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Loop and render an animation sequence Params\+: name = Sequence name (empty = current) r = SDL\+\_\+\+Renderer pointer delta\+Time = Time since last frame in seconds camera = Camera for world→screen transform \Hypertarget{classcomponent_1_1_animation_component_ab6e7fb8196e76260e036cdda9f02f044}\index{component::AnimationComponent@{component::AnimationComponent}!renderNonAnimated@{renderNonAnimated}}
+\index{renderNonAnimated@{renderNonAnimated}!component::AnimationComponent@{component::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{renderNonAnimated()}{renderNonAnimated()}}
+{\footnotesize\ttfamily \label{classcomponent_1_1_animation_component_ab6e7fb8196e76260e036cdda9f02f044} 
+void component\+::\+Animation\+Component\+::render\+Non\+Animated (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{r}{, }\item[{Camera}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Render a static, non‑animated sprite Params\+: r = SDL\+\_\+\+Renderer pointer camera = Camera for world→screen transform 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcomponent_1_1_animation_component_a5635fea65ad99a3407499b871b90311d}\index{component::AnimationComponent@{component::AnimationComponent}!animating@{animating}}
+\index{animating@{animating}!component::AnimationComponent@{component::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{animating}{animating}}
+{\footnotesize\ttfamily \label{classcomponent_1_1_animation_component_a5635fea65ad99a3407499b871b90311d} 
+bool component\+::\+Animation\+Component\+::animating}
+
+Whether animation is active \Hypertarget{classcomponent_1_1_animation_component_a85ade770b0c7b9099d3587338be2ecae}\index{component::AnimationComponent@{component::AnimationComponent}!currentIdx@{currentIdx}}
+\index{currentIdx@{currentIdx}!component::AnimationComponent@{component::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{currentIdx}{currentIdx}}
+{\footnotesize\ttfamily \label{classcomponent_1_1_animation_component_a85ade770b0c7b9099d3587338be2ecae} 
+int component\+::\+Animation\+Component\+::current\+Idx}
+
+Current frame index in sequence \Hypertarget{classcomponent_1_1_animation_component_aa6760e883decdd776936c6925e616f09}\index{component::AnimationComponent@{component::AnimationComponent}!frameDuration@{frameDuration}}
+\index{frameDuration@{frameDuration}!component::AnimationComponent@{component::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{frameDuration}{frameDuration}}
+{\footnotesize\ttfamily \label{classcomponent_1_1_animation_component_aa6760e883decdd776936c6925e616f09} 
+float component\+::\+Animation\+Component\+::frame\+Duration = 0.\+2f}
+
+Seconds between frames \Hypertarget{classcomponent_1_1_animation_component_ac098678035432de3cfeee87442846223}\index{component::AnimationComponent@{component::AnimationComponent}!frameTimer@{frameTimer}}
+\index{frameTimer@{frameTimer}!component::AnimationComponent@{component::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{frameTimer}{frameTimer}}
+{\footnotesize\ttfamily \label{classcomponent_1_1_animation_component_ac098678035432de3cfeee87442846223} 
+float component\+::\+Animation\+Component\+::frame\+Timer = 0.\+0f}
+
+Timer accumulating delta\+Time \Hypertarget{classcomponent_1_1_animation_component_aadf457944518278567941832b8d2b553}\index{component::AnimationComponent@{component::AnimationComponent}!mAnimationName@{mAnimationName}}
+\index{mAnimationName@{mAnimationName}!component::AnimationComponent@{component::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{mAnimationName}{mAnimationName}}
+{\footnotesize\ttfamily \label{classcomponent_1_1_animation_component_aadf457944518278567941832b8d2b553} 
+string component\+::\+Animation\+Component\+::m\+Animation\+Name}
+
+Current animation sequence name \Hypertarget{classcomponent_1_1_animation_component_a78a34d2eaf567b55082b848a98b9d34e}\index{component::AnimationComponent@{component::AnimationComponent}!mRendererRef@{mRendererRef}}
+\index{mRendererRef@{mRendererRef}!component::AnimationComponent@{component::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{mRendererRef}{mRendererRef}}
+{\footnotesize\ttfamily \label{classcomponent_1_1_animation_component_a78a34d2eaf567b55082b848a98b9d34e} 
+SDL\+\_\+\+Renderer\texorpdfstring{$\ast$}{*} component\+::\+Animation\+Component\+::m\+Renderer\+Ref}
+
+SDL\+\_\+\+Renderer reference for drawing \Hypertarget{classcomponent_1_1_animation_component_a92b02d3bae89dbc9ad589d3b16ea20bb}\index{component::AnimationComponent@{component::AnimationComponent}!mSprite@{mSprite}}
+\index{mSprite@{mSprite}!component::AnimationComponent@{component::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{mSprite}{mSprite}}
+{\footnotesize\ttfamily \label{classcomponent_1_1_animation_component_a92b02d3bae89dbc9ad589d3b16ea20bb} 
+Sprite component\+::\+Animation\+Component\+::m\+Sprite}
+
+Sprite containing frames and sequences \Hypertarget{classcomponent_1_1_animation_component_a57cd9ad1d85f19341d04e4d71f64fe31}\index{component::AnimationComponent@{component::AnimationComponent}!mTextureRef@{mTextureRef}}
+\index{mTextureRef@{mTextureRef}!component::AnimationComponent@{component::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{mTextureRef}{mTextureRef}}
+{\footnotesize\ttfamily \label{classcomponent_1_1_animation_component_a57cd9ad1d85f19341d04e4d71f64fe31} 
+\mbox{\hyperlink{classcomponent_1_1_texture_component}{Texture\+Component}} component\+::\+Animation\+Component\+::m\+Texture\+Ref}
+
+Reference to texture component \Hypertarget{classcomponent_1_1_animation_component_af3c378efacfae1703706aa4d5fe87b72}\index{component::AnimationComponent@{component::AnimationComponent}!mTransformRef@{mTransformRef}}
+\index{mTransformRef@{mTransformRef}!component::AnimationComponent@{component::AnimationComponent}}
+\doxysubsubsection{\texorpdfstring{mTransformRef}{mTransformRef}}
+{\footnotesize\ttfamily \label{classcomponent_1_1_animation_component_af3c378efacfae1703706aa4d5fe87b72} 
+\mbox{\hyperlink{classcomponent_1_1_transform_component}{Transform\+Component}} component\+::\+Animation\+Component\+::m\+Transform\+Ref}
+
+Reference to transform component 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/component.\+d\end{DoxyCompactItemize}

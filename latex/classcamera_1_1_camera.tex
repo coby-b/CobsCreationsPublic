@@ -1,0 +1,81 @@
+\doxysection{camera\+::Camera Class Reference}
+\hypertarget{classcamera_1_1_camera}{}\label{classcamera_1_1_camera}\index{camera::Camera@{camera::Camera}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcamera_1_1_camera_aaf236bd060f92a6f3a7e26110cbaf4de}{this}} (vec2d \+\_\+position, int w, int h)
+\item 
+vec2d \mbox{\hyperlink{classcamera_1_1_camera_a71ffc2e6f6fd21a3efb3a12fe80f7aa0}{w\+ToS}} (vec2d world)
+\item 
+vec2d \mbox{\hyperlink{classcamera_1_1_camera_a0522e543991ed312e16389e0a5f82b87}{s\+ToW}} (vec2d screen)
+\item 
+void \mbox{\hyperlink{classcamera_1_1_camera_a80e2ca2f118350cb6314a6f82e0c27ee}{update}} (vec2d new\+Pos)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vec2d \mbox{\hyperlink{classcamera_1_1_camera_ab4a12acb7b5544cacf3efa9e4da736ce}{position}}
+\item 
+int \mbox{\hyperlink{classcamera_1_1_camera_af6222b59ffa2f8c9cbe16ec65d13fff9}{screenW}}
+\item 
+int \mbox{\hyperlink{classcamera_1_1_camera_a1aa679659d853a5a15122439a13d07be}{screenH}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{classcamera_1_1_camera}{Camera} Represents a viewport that maps world space to screen space 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcamera_1_1_camera_aaf236bd060f92a6f3a7e26110cbaf4de}\index{camera::Camera@{camera::Camera}!this@{this}}
+\index{this@{this}!camera::Camera@{camera::Camera}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{classcamera_1_1_camera_aaf236bd060f92a6f3a7e26110cbaf4de} 
+camera\+::\+Camera\+::this (\begin{DoxyParamCaption}\item[{vec2d}]{\+\_\+position}{, }\item[{int}]{w}{, }\item[{int}]{h}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a \doxylink{classcamera_1_1_camera}{Camera} Params\+: \+\_\+position = World coordinate at the center of the screen w = Screen width in pixels h = Screen height in pixels 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcamera_1_1_camera_a0522e543991ed312e16389e0a5f82b87}\index{camera::Camera@{camera::Camera}!sToW@{sToW}}
+\index{sToW@{sToW}!camera::Camera@{camera::Camera}}
+\doxysubsubsection{\texorpdfstring{sToW()}{sToW()}}
+{\footnotesize\ttfamily \label{classcamera_1_1_camera_a0522e543991ed312e16389e0a5f82b87} 
+vec2d camera\+::\+Camera\+::s\+ToW (\begin{DoxyParamCaption}\item[{vec2d}]{screen}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Convert screen coordinates to world coordinates Params\+: screen = Position in screen space Returns World-\/space position \Hypertarget{classcamera_1_1_camera_a80e2ca2f118350cb6314a6f82e0c27ee}\index{camera::Camera@{camera::Camera}!update@{update}}
+\index{update@{update}!camera::Camera@{camera::Camera}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classcamera_1_1_camera_a80e2ca2f118350cb6314a6f82e0c27ee} 
+void camera\+::\+Camera\+::update (\begin{DoxyParamCaption}\item[{vec2d}]{new\+Pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Update the camera center Params\+: new\+Pos = New center position in world coordinates \Hypertarget{classcamera_1_1_camera_a71ffc2e6f6fd21a3efb3a12fe80f7aa0}\index{camera::Camera@{camera::Camera}!wToS@{wToS}}
+\index{wToS@{wToS}!camera::Camera@{camera::Camera}}
+\doxysubsubsection{\texorpdfstring{wToS()}{wToS()}}
+{\footnotesize\ttfamily \label{classcamera_1_1_camera_a71ffc2e6f6fd21a3efb3a12fe80f7aa0} 
+vec2d camera\+::\+Camera\+::w\+ToS (\begin{DoxyParamCaption}\item[{vec2d}]{world}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Convert world coordinates to screen coordinates Params\+: world = Position in world space Returns Screen-\/space position 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcamera_1_1_camera_ab4a12acb7b5544cacf3efa9e4da736ce}\index{camera::Camera@{camera::Camera}!position@{position}}
+\index{position@{position}!camera::Camera@{camera::Camera}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \label{classcamera_1_1_camera_ab4a12acb7b5544cacf3efa9e4da736ce} 
+vec2d camera\+::\+Camera\+::position}
+
+Center position of the camera in world coordinates \Hypertarget{classcamera_1_1_camera_a1aa679659d853a5a15122439a13d07be}\index{camera::Camera@{camera::Camera}!screenH@{screenH}}
+\index{screenH@{screenH}!camera::Camera@{camera::Camera}}
+\doxysubsubsection{\texorpdfstring{screenH}{screenH}}
+{\footnotesize\ttfamily \label{classcamera_1_1_camera_a1aa679659d853a5a15122439a13d07be} 
+int camera\+::\+Camera\+::screenH}
+
+Height of the screen \Hypertarget{classcamera_1_1_camera_af6222b59ffa2f8c9cbe16ec65d13fff9}\index{camera::Camera@{camera::Camera}!screenW@{screenW}}
+\index{screenW@{screenW}!camera::Camera@{camera::Camera}}
+\doxysubsubsection{\texorpdfstring{screenW}{screenW}}
+{\footnotesize\ttfamily \label{classcamera_1_1_camera_af6222b59ffa2f8c9cbe16ec65d13fff9} 
+int camera\+::\+Camera\+::screenW}
+
+Width of the screen 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/camera.\+d\end{DoxyCompactItemize}

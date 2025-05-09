@@ -1,0 +1,34 @@
+\doxysection{source/scripts/script.d File Reference}
+\hypertarget{script_8d}{}\label{script_8d}\index{source/scripts/script.d@{source/scripts/script.d}}
+{\ttfamily import bindbc.\+sdl;}\newline
+{\ttfamily import scripts.\+asteroidscript;}\newline
+{\ttfamily import scripts.\+playerscript;}\newline
+{\ttfamily import scripts.\+projectilescript;}\newline
+{\ttfamily import gameobject;}\newline
+{\ttfamily import gameapplication;}\newline
+{\ttfamily import sdl\+\_\+abstraction;}\newline
+{\ttfamily import resourcemanager;}\newline
+{\ttfamily import component;}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_script_component}{Script\+Component}} \mbox{\hyperlink{script_8d_ae741c9a888c93f64b9b08770ed03da54}{get\+Script}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} owner, string name)
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{script_8d_af8e9f446b7f6daa3222337dcd86bdc8a}{get\+All\+Script\+Names}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{script_8d_af8e9f446b7f6daa3222337dcd86bdc8a}\index{script.d@{script.d}!getAllScriptNames@{getAllScriptNames}}
+\index{getAllScriptNames@{getAllScriptNames}!script.d@{script.d}}
+\doxysubsubsection{\texorpdfstring{getAllScriptNames()}{getAllScriptNames()}}
+{\footnotesize\ttfamily \label{script_8d_af8e9f446b7f6daa3222337dcd86bdc8a} 
+string\mbox{[}$\,$\mbox{]} get\+All\+Script\+Names (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+List all available script names Returns\+: An array of valid script name strings \Hypertarget{script_8d_ae741c9a888c93f64b9b08770ed03da54}\index{script.d@{script.d}!getScript@{getScript}}
+\index{getScript@{getScript}!script.d@{script.d}}
+\doxysubsubsection{\texorpdfstring{getScript()}{getScript()}}
+{\footnotesize\ttfamily \label{script_8d_ae741c9a888c93f64b9b08770ed03da54} 
+\mbox{\hyperlink{class_script_component}{Script\+Component}} get\+Script (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}}}]{owner}{, }\item[{string}]{name}{}\end{DoxyParamCaption})}
+
+Retrieve a \doxylink{class_script_component}{Script\+Component} instance by name Params\+: owner = \doxylink{class_game_object}{Game\+Object} this script will control name = Key of the script Returns\+: A new \doxylink{class_script_component}{Script\+Component} matching the name, or null if unknown 

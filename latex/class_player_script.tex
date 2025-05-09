@@ -1,0 +1,111 @@
+\doxysection{Player\+Script Class Reference}
+\hypertarget{class_player_script}{}\label{class_player_script}\index{PlayerScript@{PlayerScript}}
+Inheritance diagram for Player\+Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_script}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_script_aabcd0e8c971301854eb64f359c88f89b}{this}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} owner)
+\item 
+override void \mbox{\hyperlink{class_player_script_ae0c2c0f901e48779250b98a14904ae84}{input}} (SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}event, float delta\+Time)
+\item 
+override void \mbox{\hyperlink{class_player_script_a53c3e71ec488e7e35102c5718535bddb}{update}} (float delta\+Time)
+\item 
+float \mbox{\hyperlink{class_player_script_afe7cd005dca7d428fe46eeb2c1a1aca0}{border}} (float val, float min\+Val, float max\+Val)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structvec2d}{vec2d}} \mbox{\hyperlink{class_player_script_a646ba001b3d6a505295e4f70bd9f303e}{velocity}}
+\item 
+float \mbox{\hyperlink{class_player_script_a54017bc9fd0262c9bffef0e68fdd4be7}{thrust}} = 150.\+0f
+\item 
+float \mbox{\hyperlink{class_player_script_aa8245c70d38f0f6ea5e51c2254d43557}{rotation\+Speed}} = 180.\+0f
+\item 
+float \mbox{\hyperlink{class_player_script_ae0a4c941a6253f52acbafdd186855e4a}{cool\+Down}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{class_player_script_a57cd05be885e27a15d94df51c50c636f}{max\+Cool\+Down}} = 0.\+75f
+\item 
+bool \mbox{\hyperlink{class_player_script_aba2c45280f2c3d09ad8e90448b16cb5e}{triple\+Shot}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{class_player_script}{Player\+Script} Applies thrust, rotation, shooting, and flag‑driven power‑ups to the player 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_player_script_aabcd0e8c971301854eb64f359c88f89b}\index{PlayerScript@{PlayerScript}!this@{this}}
+\index{this@{this}!PlayerScript@{PlayerScript}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{class_player_script_aabcd0e8c971301854eb64f359c88f89b} 
+Player\+Script\+::this (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}}}]{owner}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Construct a \doxylink{class_player_script}{Player\+Script}, adjusting parameters based on flags Params\+: owner = The \doxylink{class_game_object}{Game\+Object} this script is attached to 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_script_afe7cd005dca7d428fe46eeb2c1a1aca0}\index{PlayerScript@{PlayerScript}!border@{border}}
+\index{border@{border}!PlayerScript@{PlayerScript}}
+\doxysubsubsection{\texorpdfstring{border()}{border()}}
+{\footnotesize\ttfamily \label{class_player_script_afe7cd005dca7d428fe46eeb2c1a1aca0} 
+float Player\+Script\+::border (\begin{DoxyParamCaption}\item[{float}]{val}{, }\item[{float}]{min\+Val}{, }\item[{float}]{max\+Val}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Clamp a value between min\+Val and max\+Val Params\+: val = Value to clamp min\+Val = Minimum allowed max\+Val = Maximum allowed Returns\+: Clamped value \Hypertarget{class_player_script_ae0c2c0f901e48779250b98a14904ae84}\index{PlayerScript@{PlayerScript}!input@{input}}
+\index{input@{input}!PlayerScript@{PlayerScript}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily \label{class_player_script_ae0c2c0f901e48779250b98a14904ae84} 
+override void Player\+Script\+::input (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}}]{event}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Handle keyboard input for rotation, thrust, and shooting Params\+: event = Pointer to SDL\+\_\+\+Event delta\+Time = Time elapsed since last frame, in seconds \Hypertarget{class_player_script_a53c3e71ec488e7e35102c5718535bddb}\index{PlayerScript@{PlayerScript}!update@{update}}
+\index{update@{update}!PlayerScript@{PlayerScript}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_player_script_a53c3e71ec488e7e35102c5718535bddb} 
+override void Player\+Script\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Update position, enforce world boundaries, apply friction, and reduce cooldown Params\+: delta\+Time = Time elapsed since last frame, in seconds 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_player_script_ae0a4c941a6253f52acbafdd186855e4a}\index{PlayerScript@{PlayerScript}!coolDown@{coolDown}}
+\index{coolDown@{coolDown}!PlayerScript@{PlayerScript}}
+\doxysubsubsection{\texorpdfstring{coolDown}{coolDown}}
+{\footnotesize\ttfamily \label{class_player_script_ae0a4c941a6253f52acbafdd186855e4a} 
+float Player\+Script\+::cool\+Down = 0.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+Current cooldown timer for shooting \Hypertarget{class_player_script_a57cd05be885e27a15d94df51c50c636f}\index{PlayerScript@{PlayerScript}!maxCoolDown@{maxCoolDown}}
+\index{maxCoolDown@{maxCoolDown}!PlayerScript@{PlayerScript}}
+\doxysubsubsection{\texorpdfstring{maxCoolDown}{maxCoolDown}}
+{\footnotesize\ttfamily \label{class_player_script_a57cd05be885e27a15d94df51c50c636f} 
+float Player\+Script\+::max\+Cool\+Down = 0.\+75f\hspace{0.3cm}{\ttfamily [private]}}
+
+Maximum cooldown duration \Hypertarget{class_player_script_aa8245c70d38f0f6ea5e51c2254d43557}\index{PlayerScript@{PlayerScript}!rotationSpeed@{rotationSpeed}}
+\index{rotationSpeed@{rotationSpeed}!PlayerScript@{PlayerScript}}
+\doxysubsubsection{\texorpdfstring{rotationSpeed}{rotationSpeed}}
+{\footnotesize\ttfamily \label{class_player_script_aa8245c70d38f0f6ea5e51c2254d43557} 
+float Player\+Script\+::rotation\+Speed = 180.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+Rotation speed in degrees/sec \Hypertarget{class_player_script_a54017bc9fd0262c9bffef0e68fdd4be7}\index{PlayerScript@{PlayerScript}!thrust@{thrust}}
+\index{thrust@{thrust}!PlayerScript@{PlayerScript}}
+\doxysubsubsection{\texorpdfstring{thrust}{thrust}}
+{\footnotesize\ttfamily \label{class_player_script_a54017bc9fd0262c9bffef0e68fdd4be7} 
+float Player\+Script\+::thrust = 150.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+Base thrust force \Hypertarget{class_player_script_aba2c45280f2c3d09ad8e90448b16cb5e}\index{PlayerScript@{PlayerScript}!tripleShot@{tripleShot}}
+\index{tripleShot@{tripleShot}!PlayerScript@{PlayerScript}}
+\doxysubsubsection{\texorpdfstring{tripleShot}{tripleShot}}
+{\footnotesize\ttfamily \label{class_player_script_aba2c45280f2c3d09ad8e90448b16cb5e} 
+bool Player\+Script\+::triple\+Shot = false\hspace{0.3cm}{\ttfamily [private]}}
+
+Triple‑shot flag enabled \Hypertarget{class_player_script_a646ba001b3d6a505295e4f70bd9f303e}\index{PlayerScript@{PlayerScript}!velocity@{velocity}}
+\index{velocity@{velocity}!PlayerScript@{PlayerScript}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily \label{class_player_script_a646ba001b3d6a505295e4f70bd9f303e} 
+\mbox{\hyperlink{structvec2d}{vec2d}} Player\+Script\+::velocity\hspace{0.3cm}{\ttfamily [private]}}
+
+Current velocity vector 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/scripts/\mbox{\hyperlink{playerscript_8d}{playerscript.\+d}}\end{DoxyCompactItemize}

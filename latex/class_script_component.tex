@@ -1,0 +1,52 @@
+\doxysection{Script\+Component Class Reference}
+\hypertarget{class_script_component}{}\label{class_script_component}\index{ScriptComponent@{ScriptComponent}}
+Inheritance diagram for Script\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_script_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_script_component_adebabdbf6ed1f7dd9186535fc4f384ae}{update}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{class_script_component_a259b1473c65e56ee56577e9b11334212}{input}} (SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}event, float delta\+Time)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Transform\+Component \mbox{\hyperlink{class_script_component_a830cd145e7a21b8cd23ca16843935c13}{m\+Transform\+Ref}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class \doxylink{class_script_component}{Script\+Component} Base for \doxylink{class_game_object}{Game\+Object} behavior scripts 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_script_component_a259b1473c65e56ee56577e9b11334212}\index{ScriptComponent@{ScriptComponent}!input@{input}}
+\index{input@{input}!ScriptComponent@{ScriptComponent}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily \label{class_script_component_a259b1473c65e56ee56577e9b11334212} 
+void Script\+Component\+::input (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}}]{event}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Handle per-\/event input Params\+: event = SDL\+\_\+\+Event pointer delta\+Time = Time since last frame in seconds \Hypertarget{class_script_component_adebabdbf6ed1f7dd9186535fc4f384ae}\index{ScriptComponent@{ScriptComponent}!update@{update}}
+\index{update@{update}!ScriptComponent@{ScriptComponent}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_script_component_adebabdbf6ed1f7dd9186535fc4f384ae} 
+void Script\+Component\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Update behavior each frame Params\+: delta\+Time = Time since last frame in seconds 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_script_component_a830cd145e7a21b8cd23ca16843935c13}\index{ScriptComponent@{ScriptComponent}!mTransformRef@{mTransformRef}}
+\index{mTransformRef@{mTransformRef}!ScriptComponent@{ScriptComponent}}
+\doxysubsubsection{\texorpdfstring{mTransformRef}{mTransformRef}}
+{\footnotesize\ttfamily \label{class_script_component_a830cd145e7a21b8cd23ca16843935c13} 
+Transform\+Component Script\+Component\+::m\+Transform\+Ref\hspace{0.3cm}{\ttfamily [private]}}
+
+Reference to transform component 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{component_8d}{component.\+d}}\end{DoxyCompactItemize}

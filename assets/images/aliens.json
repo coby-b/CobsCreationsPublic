@@ -1,0 +1,15 @@
+{
+    "filepath":"./images/assets/test.bmp",
+      "format":{
+            "width"		: 120,
+            "height"		: 90,
+            "tileWidth"	: 30,
+            "tileHeight"	: 30,
+            "baseAnimation" : "aliens1"
+      },
+      "frames":{
+            "aliens1": [0,1,2,3],
+            "alien2": [4,5,6,7],
+            "alien3": [8,9,10,11]
+      }
+}

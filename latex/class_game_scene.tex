@@ -1,0 +1,151 @@
+\doxysection{Game\+Scene Class Reference}
+\hypertarget{class_game_scene}{}\label{class_game_scene}\index{GameScene@{GameScene}}
+Inheritance diagram for Game\+Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_scene}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_scene_a0358351d8ced69d78f51c96fd19d8461}{this}} (\mbox{\hyperlink{class_game_application}{Game\+Application}} g, string scfile, int lvl)
+\item 
+void \mbox{\hyperlink{class_game_scene_aa8d3190f8ef033943f20d95049c53c51}{setup\+Scene}} ()
+\item 
+override void \mbox{\hyperlink{class_game_scene_ac4cdc558e44e42f3dfc0cd4c4950439e}{handle\+Event}} (SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}event, float delta\+Time)
+\item 
+override void \mbox{\hyperlink{class_game_scene_ae029f264aaacb2d147b7a6df0b7314bc}{update}} (float delta\+Time)
+\item 
+override void \mbox{\hyperlink{class_game_scene_a2716c6780ad487b1ec11cc82fa73d558}{render}} (float delta\+Time)
+\item 
+bool \mbox{\hyperlink{class_game_scene_a5e5ecd552f15e2dc80e7f7b52a09467b}{intersects}} (\mbox{\hyperlink{structvec2d}{vec2d}} pos1, \mbox{\hyperlink{structvec2d}{vec2d}} size1, \mbox{\hyperlink{structvec2d}{vec2d}} pos2, \mbox{\hyperlink{structvec2d}{vec2d}} size2)
+\item 
+void \mbox{\hyperlink{class_game_scene_a87ae83108c98aad9510b3a3565a22ab0}{check\+Collisions}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_camera}{Camera}} \mbox{\hyperlink{class_game_scene_aa118a803f0a3a0947b3eb8924635a725}{m\+Camera}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_camera}{Camera} for game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \mbox{\hyperlink{class_game_scene_a3220507529630982bdd7e74410f9d107}{player}}
+\begin{DoxyCompactList}\small\item\em Denotes the player. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_scene_a67dd9eb939e3d796f4e1287eaea40e6d}{score}} = 0
+\begin{DoxyCompactList}\small\item\em Track of the current score. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_game_scene_ab5545796d2889d3388c0e5559ddfac29}{scene\+File}}
+\begin{DoxyCompactList}\small\item\em Path to our scene\textquotesingle{}s JSON file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_scene_ad185164eb23c899eed338f8f4d0064bd}{level}}
+\begin{DoxyCompactList}\small\item\em Current level in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{class_game_scene}{Game\+Scene} Runs the actual gameplay\+: loads a JSON scene and handles collisions 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_scene_a0358351d8ced69d78f51c96fd19d8461}\index{GameScene@{GameScene}!this@{this}}
+\index{this@{this}!GameScene@{GameScene}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{class_game_scene_a0358351d8ced69d78f51c96fd19d8461} 
+Game\+Scene\+::this (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_application}{Game\+Application}}}]{g}{, }\item[{string}]{scfile}{, }\item[{int}]{lvl}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Construct a \doxylink{class_game_scene}{Game\+Scene} Params\+: g = Parent \doxylink{class_game_application}{Game\+Application} scfile = Path to JSON scene file lvl = Level index or -\/1 for custom 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_scene_a87ae83108c98aad9510b3a3565a22ab0}\index{GameScene@{GameScene}!checkCollisions@{checkCollisions}}
+\index{checkCollisions@{checkCollisions}!GameScene@{GameScene}}
+\doxysubsubsection{\texorpdfstring{checkCollisions()}{checkCollisions()}}
+{\footnotesize\ttfamily \label{class_game_scene_a87ae83108c98aad9510b3a3565a22ab0} 
+void Game\+Scene\+::check\+Collisions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Check collisions between projectiles, asteroids, and player. Advances levels or resets on win/lose. \Hypertarget{class_game_scene_ac4cdc558e44e42f3dfc0cd4c4950439e}\index{GameScene@{GameScene}!handleEvent@{handleEvent}}
+\index{handleEvent@{handleEvent}!GameScene@{GameScene}}
+\doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}}
+{\footnotesize\ttfamily \label{class_game_scene_ac4cdc558e44e42f3dfc0cd4c4950439e} 
+override void Game\+Scene\+::handle\+Event (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}}]{event}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Handle input events within game\+:
+\begin{DoxyItemize}
+\item ESC to return to Main\+Menu
+\item Pass to \doxylink{class_game_object}{Game\+Object} scripts 
+\end{DoxyItemize}\Hypertarget{class_game_scene_a5e5ecd552f15e2dc80e7f7b52a09467b}\index{GameScene@{GameScene}!intersects@{intersects}}
+\index{intersects@{intersects}!GameScene@{GameScene}}
+\doxysubsubsection{\texorpdfstring{intersects()}{intersects()}}
+{\footnotesize\ttfamily \label{class_game_scene_a5e5ecd552f15e2dc80e7f7b52a09467b} 
+bool Game\+Scene\+::intersects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvec2d}{vec2d}}}]{pos1}{, }\item[{\mbox{\hyperlink{structvec2d}{vec2d}}}]{size1}{, }\item[{\mbox{\hyperlink{structvec2d}{vec2d}}}]{pos2}{, }\item[{\mbox{\hyperlink{structvec2d}{vec2d}}}]{size2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Axis-\/aligned bounding box test \Hypertarget{class_game_scene_a2716c6780ad487b1ec11cc82fa73d558}\index{GameScene@{GameScene}!render@{render}}
+\index{render@{render}!GameScene@{GameScene}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_game_scene_a2716c6780ad487b1ec11cc82fa73d558} 
+override void Game\+Scene\+::render (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Render all Game\+Objects \Hypertarget{class_game_scene_aa8d3190f8ef033943f20d95049c53c51}\index{GameScene@{GameScene}!setupScene@{setupScene}}
+\index{setupScene@{setupScene}!GameScene@{GameScene}}
+\doxysubsubsection{\texorpdfstring{setupScene()}{setupScene()}}
+{\footnotesize\ttfamily \label{class_game_scene_aa8d3190f8ef033943f20d95049c53c51} 
+void Game\+Scene\+::setup\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Initialize scene tree, camera, and player object \Hypertarget{class_game_scene_ae029f264aaacb2d147b7a6df0b7314bc}\index{GameScene@{GameScene}!update@{update}}
+\index{update@{update}!GameScene@{GameScene}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_game_scene_ae029f264aaacb2d147b7a6df0b7314bc} 
+override void Game\+Scene\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Update all Game\+Objects and camera, then check collisions 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_game_scene_ad185164eb23c899eed338f8f4d0064bd}\index{GameScene@{GameScene}!level@{level}}
+\index{level@{level}!GameScene@{GameScene}}
+\doxysubsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily \label{class_game_scene_ad185164eb23c899eed338f8f4d0064bd} 
+int Game\+Scene\+::level\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current level in the game. 
+
+\Hypertarget{class_game_scene_aa118a803f0a3a0947b3eb8924635a725}\index{GameScene@{GameScene}!mCamera@{mCamera}}
+\index{mCamera@{mCamera}!GameScene@{GameScene}}
+\doxysubsubsection{\texorpdfstring{mCamera}{mCamera}}
+{\footnotesize\ttfamily \label{class_game_scene_aa118a803f0a3a0947b3eb8924635a725} 
+\mbox{\hyperlink{class_camera}{Camera}} Game\+Scene\+::m\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_camera}{Camera} for game. 
+
+\Hypertarget{class_game_scene_a3220507529630982bdd7e74410f9d107}\index{GameScene@{GameScene}!player@{player}}
+\index{player@{player}!GameScene@{GameScene}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \label{class_game_scene_a3220507529630982bdd7e74410f9d107} 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} Game\+Scene\+::player\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Denotes the player. 
+
+\Hypertarget{class_game_scene_ab5545796d2889d3388c0e5559ddfac29}\index{GameScene@{GameScene}!sceneFile@{sceneFile}}
+\index{sceneFile@{sceneFile}!GameScene@{GameScene}}
+\doxysubsubsection{\texorpdfstring{sceneFile}{sceneFile}}
+{\footnotesize\ttfamily \label{class_game_scene_ab5545796d2889d3388c0e5559ddfac29} 
+string Game\+Scene\+::scene\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Path to our scene\textquotesingle{}s JSON file. 
+
+\Hypertarget{class_game_scene_a67dd9eb939e3d796f4e1287eaea40e6d}\index{GameScene@{GameScene}!score@{score}}
+\index{score@{score}!GameScene@{GameScene}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily \label{class_game_scene_a67dd9eb939e3d796f4e1287eaea40e6d} 
+int Game\+Scene\+::score = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Track of the current score. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{scene_8d}{scene.\+d}}\end{DoxyCompactItemize}

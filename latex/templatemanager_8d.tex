@@ -1,0 +1,68 @@
+\doxysection{source/templatemanager.d File Reference}
+\hypertarget{templatemanager_8d}{}\label{templatemanager_8d}\index{source/templatemanager.d@{source/templatemanager.d}}
+{\ttfamily import component;}\newline
+{\ttfamily import gameapplication;}\newline
+{\ttfamily import gameobject;}\newline
+{\ttfamily import scripts.\+script;}\newline
+{\ttfamily import std.\+json;}\newline
+{\ttfamily import std.\+file;}\newline
+{\ttfamily import std.\+array;}\newline
+{\ttfamily import std.\+algorithm;}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_obj_template}{Obj\+Template}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{templatemanager_8d_a0cae24b2a474f92eb43c75f2bed0fc64}{load\+Templates}} (string filepath)
+\item 
+bool \mbox{\hyperlink{templatemanager_8d_a7d4907fb45ccea966155ec6f2cdbccee}{template\+Saved}} (string name)
+\item 
+\mbox{\hyperlink{struct_obj_template}{Obj\+Template}} \mbox{\hyperlink{templatemanager_8d_ad155bd18524960a265e2ead57d964b7d}{get\+Obj\+Temp}} (string name)
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{templatemanager_8d_aaada3cbdec0dc5426c330e58f39e96dd}{get\+All\+Template\+Names}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_obj_template}{Obj\+Template}} \mbox{\hyperlink{templatemanager_8d_abe816f021dfeb8ef7ccdf27fe38074c8}{m\+Templates}} \mbox{[}string\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{templatemanager_8d_aaada3cbdec0dc5426c330e58f39e96dd}\index{templatemanager.d@{templatemanager.d}!getAllTemplateNames@{getAllTemplateNames}}
+\index{getAllTemplateNames@{getAllTemplateNames}!templatemanager.d@{templatemanager.d}}
+\doxysubsubsection{\texorpdfstring{getAllTemplateNames()}{getAllTemplateNames()}}
+{\footnotesize\ttfamily \label{templatemanager_8d_aaada3cbdec0dc5426c330e58f39e96dd} 
+string\mbox{[}$\,$\mbox{]} get\+All\+Template\+Names (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+List all template names Returns\+: Array of keys \Hypertarget{templatemanager_8d_ad155bd18524960a265e2ead57d964b7d}\index{templatemanager.d@{templatemanager.d}!getObjTemp@{getObjTemp}}
+\index{getObjTemp@{getObjTemp}!templatemanager.d@{templatemanager.d}}
+\doxysubsubsection{\texorpdfstring{getObjTemp()}{getObjTemp()}}
+{\footnotesize\ttfamily \label{templatemanager_8d_ad155bd18524960a265e2ead57d964b7d} 
+\mbox{\hyperlink{struct_obj_template}{Obj\+Template}} get\+Obj\+Temp (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})}
+
+Retrieve a template definition Params\+: name = Template key Returns\+: \doxylink{struct_obj_template}{Obj\+Template} \Hypertarget{templatemanager_8d_a0cae24b2a474f92eb43c75f2bed0fc64}\index{templatemanager.d@{templatemanager.d}!loadTemplates@{loadTemplates}}
+\index{loadTemplates@{loadTemplates}!templatemanager.d@{templatemanager.d}}
+\doxysubsubsection{\texorpdfstring{loadTemplates()}{loadTemplates()}}
+{\footnotesize\ttfamily \label{templatemanager_8d_a0cae24b2a474f92eb43c75f2bed0fc64} 
+void load\+Templates (\begin{DoxyParamCaption}\item[{string}]{filepath}{}\end{DoxyParamCaption})}
+
+Load all templates from a JSON file. Params\+: filepath = Path to template JSON. \Hypertarget{templatemanager_8d_a7d4907fb45ccea966155ec6f2cdbccee}\index{templatemanager.d@{templatemanager.d}!templateSaved@{templateSaved}}
+\index{templateSaved@{templateSaved}!templatemanager.d@{templatemanager.d}}
+\doxysubsubsection{\texorpdfstring{templateSaved()}{templateSaved()}}
+{\footnotesize\ttfamily \label{templatemanager_8d_a7d4907fb45ccea966155ec6f2cdbccee} 
+bool template\+Saved (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})}
+
+Check if a template exists Params\+: name = Template key Returns\+: True if loaded 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{templatemanager_8d_abe816f021dfeb8ef7ccdf27fe38074c8}\index{templatemanager.d@{templatemanager.d}!mTemplates@{mTemplates}}
+\index{mTemplates@{mTemplates}!templatemanager.d@{templatemanager.d}}
+\doxysubsubsection{\texorpdfstring{mTemplates}{mTemplates}}
+{\footnotesize\ttfamily \label{templatemanager_8d_abe816f021dfeb8ef7ccdf27fe38074c8} 
+struct \mbox{\hyperlink{struct_obj_template}{Obj\+Template}} m\+Templates\mbox{[}string\mbox{]}}
+
+Class Template\+Manager Holds all object templates loaded from JSON Name→\+Obj\+Template map 

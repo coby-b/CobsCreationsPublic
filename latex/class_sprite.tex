@@ -1,0 +1,137 @@
+\doxysection{Sprite Class Reference}
+\hypertarget{class_sprite}{}\label{class_sprite}\index{Sprite@{Sprite}}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sprite_aa02d9b4ec2905ac138ce18f5336c0a56}{this}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, string image, string data)
+\item 
+\mbox{\hyperlink{class_sprite_a0a2af1744bddb4fb3ee7debc27c1f89a}{\texorpdfstring{$\sim$}{\string~}this}} ()
+\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{class_sprite_a3367e43f718628017db8fd418ddeeec4}{get\+Frame\+Rect}} (int frame\+Index)
+\item 
+void \mbox{\hyperlink{class_sprite_a92b6891208262eb435d447f79d781e63}{load\+Animations}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sprite_afb6fad6fffb597a1d4b6b6e724dd431f}{m\+Texture}}
+\item 
+int \mbox{\hyperlink{class_sprite_a0a3364944c5e361fc9e7ae406224d682}{width}}
+\item 
+int \mbox{\hyperlink{class_sprite_a1f07c8f2080c193759aec0e13503d7ab}{height}}
+\item 
+int \mbox{\hyperlink{class_sprite_acb083f45475c233be65a22f8b3aaddd8}{tile\+\_\+width}}
+\item 
+int \mbox{\hyperlink{class_sprite_a8ea61bec3f3c86c68b8f47a27072e61e}{tile\+\_\+height}}
+\item 
+int \mbox{\hyperlink{class_sprite_aae194cf011b6d7d7956478896adadb4a}{columns}}
+\item 
+bool \mbox{\hyperlink{class_sprite_a6e70ddeb82dcbf4030ad83347ba5fc0e}{is\+Animated}}
+\item 
+long\mbox{[}$\,$\mbox{]}\mbox{[}string\mbox{]} \mbox{\hyperlink{class_sprite_a6f7b9818e38c468f6d11b4a86b9b11f7}{m\+Frame\+Sequences}}
+\item 
+SDL\+\_\+\+Rect\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_sprite_ad7fe4986dcb733ac51c2941cff149ade}{m\+Frames}}
+\item 
+string \mbox{\hyperlink{class_sprite_a6186aeccd7e1cc0e93dbee4862361246}{base\+Animation}} = "{}"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{class_sprite}{Sprite} Wraps an SDL\+\_\+\+Texture and its animation frames 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sprite_aa02d9b4ec2905ac138ce18f5336c0a56}\index{Sprite@{Sprite}!this@{this}}
+\index{this@{this}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{class_sprite_aa02d9b4ec2905ac138ce18f5336c0a56} 
+Sprite\+::this (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer}{, }\item[{string}]{image}{, }\item[{string}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Load a texture and its JSON metadata Params\+: renderer = SDL renderer image = Path to BMP data = Path to JSON metadata \Hypertarget{class_sprite_a0a2af1744bddb4fb3ee7debc27c1f89a}\index{Sprite@{Sprite}!````~this@{\texorpdfstring{$\sim$}{\string~}this}}
+\index{````~this@{\texorpdfstring{$\sim$}{\string~}this}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}this()}{\string~this()}}
+{\footnotesize\ttfamily \label{class_sprite_a0a2af1744bddb4fb3ee7debc27c1f89a} 
+Sprite\+::\texorpdfstring{$\sim$}{\string~}this (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Destructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sprite_a3367e43f718628017db8fd418ddeeec4}\index{Sprite@{Sprite}!getFrameRect@{getFrameRect}}
+\index{getFrameRect@{getFrameRect}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{getFrameRect()}{getFrameRect()}}
+{\footnotesize\ttfamily \label{class_sprite_a3367e43f718628017db8fd418ddeeec4} 
+SDL\+\_\+\+Rect Sprite\+::get\+Frame\+Rect (\begin{DoxyParamCaption}\item[{int}]{frame\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Compute the source rectangle for a given frame index Params\+: frame\+Index = Index in the frame array Returns\+: Corresponding SDL\+\_\+\+Rect \Hypertarget{class_sprite_a92b6891208262eb435d447f79d781e63}\index{Sprite@{Sprite}!loadAnimations@{loadAnimations}}
+\index{loadAnimations@{loadAnimations}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{loadAnimations()}{loadAnimations()}}
+{\footnotesize\ttfamily \label{class_sprite_a92b6891208262eb435d447f79d781e63} 
+void Sprite\+::load\+Animations (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Build the full m\+Frames array 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_sprite_a6186aeccd7e1cc0e93dbee4862361246}\index{Sprite@{Sprite}!baseAnimation@{baseAnimation}}
+\index{baseAnimation@{baseAnimation}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{baseAnimation}{baseAnimation}}
+{\footnotesize\ttfamily \label{class_sprite_a6186aeccd7e1cc0e93dbee4862361246} 
+string Sprite\+::base\+Animation = "{}"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+Default animation name \Hypertarget{class_sprite_aae194cf011b6d7d7956478896adadb4a}\index{Sprite@{Sprite}!columns@{columns}}
+\index{columns@{columns}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily \label{class_sprite_aae194cf011b6d7d7956478896adadb4a} 
+int Sprite\+::columns\hspace{0.3cm}{\ttfamily [private]}}
+
+Frames per row \Hypertarget{class_sprite_a1f07c8f2080c193759aec0e13503d7ab}\index{Sprite@{Sprite}!height@{height}}
+\index{height@{height}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily \label{class_sprite_a1f07c8f2080c193759aec0e13503d7ab} 
+int Sprite\+::height\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_sprite_a6e70ddeb82dcbf4030ad83347ba5fc0e}\index{Sprite@{Sprite}!isAnimated@{isAnimated}}
+\index{isAnimated@{isAnimated}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{isAnimated}{isAnimated}}
+{\footnotesize\ttfamily \label{class_sprite_a6e70ddeb82dcbf4030ad83347ba5fc0e} 
+bool Sprite\+::is\+Animated\hspace{0.3cm}{\ttfamily [private]}}
+
+True if multi–frame \Hypertarget{class_sprite_ad7fe4986dcb733ac51c2941cff149ade}\index{Sprite@{Sprite}!mFrames@{mFrames}}
+\index{mFrames@{mFrames}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{mFrames}{mFrames}}
+{\footnotesize\ttfamily \label{class_sprite_ad7fe4986dcb733ac51c2941cff149ade} 
+SDL\+\_\+\+Rect \mbox{[}$\,$\mbox{]} Sprite\+::m\+Frames\hspace{0.3cm}{\ttfamily [private]}}
+
+All frame rectangles \Hypertarget{class_sprite_a6f7b9818e38c468f6d11b4a86b9b11f7}\index{Sprite@{Sprite}!mFrameSequences@{mFrameSequences}}
+\index{mFrameSequences@{mFrameSequences}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{mFrameSequences}{mFrameSequences}}
+{\footnotesize\ttfamily \label{class_sprite_a6f7b9818e38c468f6d11b4a86b9b11f7} 
+long \mbox{[}$\,$\mbox{]}\mbox{[}string\mbox{]} Sprite\+::m\+Frame\+Sequences\hspace{0.3cm}{\ttfamily [private]}}
+
+Frame sequences by name \Hypertarget{class_sprite_afb6fad6fffb597a1d4b6b6e724dd431f}\index{Sprite@{Sprite}!mTexture@{mTexture}}
+\index{mTexture@{mTexture}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{mTexture}{mTexture}}
+{\footnotesize\ttfamily \label{class_sprite_afb6fad6fffb597a1d4b6b6e724dd431f} 
+SDL\+\_\+\+Texture\texorpdfstring{$\ast$}{*} Sprite\+::m\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+Underlying SDL texture \Hypertarget{class_sprite_a8ea61bec3f3c86c68b8f47a27072e61e}\index{Sprite@{Sprite}!tile\_height@{tile\_height}}
+\index{tile\_height@{tile\_height}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{tile\_height}{tile\_height}}
+{\footnotesize\ttfamily \label{class_sprite_a8ea61bec3f3c86c68b8f47a27072e61e} 
+int Sprite\+::tile\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_sprite_acb083f45475c233be65a22f8b3aaddd8}\index{Sprite@{Sprite}!tile\_width@{tile\_width}}
+\index{tile\_width@{tile\_width}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{tile\_width}{tile\_width}}
+{\footnotesize\ttfamily \label{class_sprite_acb083f45475c233be65a22f8b3aaddd8} 
+int Sprite\+::tile\+\_\+width\hspace{0.3cm}{\ttfamily [private]}}
+
+Frame size \Hypertarget{class_sprite_a0a3364944c5e361fc9e7ae406224d682}\index{Sprite@{Sprite}!width@{width}}
+\index{width@{width}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily \label{class_sprite_a0a3364944c5e361fc9e7ae406224d682} 
+int Sprite\+::width\hspace{0.3cm}{\ttfamily [private]}}
+
+Full image size 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{resourcemanager_8d}{resourcemanager.\+d}}\end{DoxyCompactItemize}

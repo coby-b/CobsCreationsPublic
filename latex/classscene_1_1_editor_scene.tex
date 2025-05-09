@@ -1,0 +1,197 @@
+\doxysection{scene\+::Editor\+Scene Class Reference}
+\hypertarget{classscene_1_1_editor_scene}{}\label{classscene_1_1_editor_scene}\index{scene::EditorScene@{scene::EditorScene}}
+Inheritance diagram for scene\+::Editor\+Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classscene_1_1_editor_scene}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classscene_1_1_editor_scene_a7dfb26b0d3b3ddc10b76a2f9d1a72fac}{this}} (Game\+Application g)
+\item 
+void \mbox{\hyperlink{classscene_1_1_editor_scene_a97aa8941c20cb21fe8e9758636fa330f}{setup\+Scene}} ()
+\item 
+void \mbox{\hyperlink{classscene_1_1_editor_scene_a0c9ffa757d0fd443d099773ac5dde975}{set\+Current\+Flags}} ()
+\item 
+override void \mbox{\hyperlink{classscene_1_1_editor_scene_aec7549ee164cdccc16a9a699d19a9490}{cleanup}} ()
+\item 
+override void \mbox{\hyperlink{classscene_1_1_editor_scene_a5138cc0d4a9b2dbd73c41ccaa785e63e}{handle\+Event}} (SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}e, float delta\+Time)
+\item 
+override void \mbox{\hyperlink{classscene_1_1_editor_scene_a5e68358b5e9bc328f26c65c82963ecf8}{update}} (float delta\+Time)
+\item 
+override void \mbox{\hyperlink{classscene_1_1_editor_scene_abb634362348fa2a43ade66312da1b3cf}{render}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{classscene_1_1_editor_scene_a9772e1e443cdc6ede5f9796c8616fb47}{save\+Scene}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classscene_1_1_scene}{scene\+::\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classscene_1_1_scene_a64ebc475cbd1f74b53fa46e2cfe4d387}{this}} (Game\+Application g)
+\item 
+void \mbox{\hyperlink{classscene_1_1_scene_a3358d2e9fd4cd46aa397184e32c48a2d}{cleanup}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TTF\+\_\+\+Font \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classscene_1_1_editor_scene_ae25146f52f72ddd7dca44891f48d7b57}{font}}
+\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{classscene_1_1_editor_scene_a2f13fcf6750ab5e4e81c036c84f743ec}{save\+Btn\+Rect}}
+\item 
+\Hypertarget{classscene_1_1_editor_scene_abf1664e1e75ff83812a5660399a8d876}\label{classscene_1_1_editor_scene_abf1664e1e75ff83812a5660399a8d876} 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} {\bfseries save\+Btn\+Tex}
+\item 
+\Hypertarget{classscene_1_1_editor_scene_ae261eee7a458b9a6682324fcfa0528c3}\label{classscene_1_1_editor_scene_ae261eee7a458b9a6682324fcfa0528c3} 
+SDL\+\_\+\+Rect {\bfseries save\+Text\+Rect}
+\begin{DoxyCompactList}\small\item\em ditto \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classscene_1_1_editor_scene_a50313bc8879b9c72ebb4ae3c9fe0d803}{templates}}
+\begin{DoxyCompactList}\small\item\em ditto \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classscene_1_1_editor_scene_a7ac2b64839dc51aec756352df0523ccd}{sel\+Template}}
+\item 
+int \mbox{\hyperlink{classscene_1_1_editor_scene_a20bc67ef64e78499802aaf9e6289ace6}{popup\+Stage}}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classscene_1_1_editor_scene_a172eaae235960bd2f61b0620aaa625be}{current\+Flags}}
+\item 
+bool\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classscene_1_1_editor_scene_aebe80c169a8727ed1cff4282fbc82862}{flags\+Selected}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classscene_1_1_editor_scene_a1d30f7fd08bafd8684ed04bae27db42d}{sel\+Flag}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classscene_1_1_scene}{scene\+::\+Scene}}}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Application \mbox{\hyperlink{classscene_1_1_scene_a345061ba429e6953434e70721d76da54}{game}}
+\item 
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classscene_1_1_scene_afbbe095b0d77e138ba71061b70c7188a}{m\+Renderer}}
+\item 
+Scene\+Tree \mbox{\hyperlink{classscene_1_1_scene_a2cdc8a98a9d0431683d2d27b705d6266}{scene\+Tree}} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{classscene_1_1_editor_scene}{Editor\+Scene} Allows placement of Game\+Object templates with selectable flags 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classscene_1_1_editor_scene_a7dfb26b0d3b3ddc10b76a2f9d1a72fac}\index{scene::EditorScene@{scene::EditorScene}!this@{this}}
+\index{this@{this}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_a7dfb26b0d3b3ddc10b76a2f9d1a72fac} 
+scene\+::\+Editor\+Scene\+::this (\begin{DoxyParamCaption}\item[{Game\+Application}]{g}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct the editor scene Params\+: g = Parent Game\+Application 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classscene_1_1_editor_scene_aec7549ee164cdccc16a9a699d19a9490}\index{scene::EditorScene@{scene::EditorScene}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_aec7549ee164cdccc16a9a699d19a9490} 
+override void scene\+::\+Editor\+Scene\+::cleanup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cleanup textures and font \Hypertarget{classscene_1_1_editor_scene_a5138cc0d4a9b2dbd73c41ccaa785e63e}\index{scene::EditorScene@{scene::EditorScene}!handleEvent@{handleEvent}}
+\index{handleEvent@{handleEvent}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_a5138cc0d4a9b2dbd73c41ccaa785e63e} 
+override void scene\+::\+Editor\+Scene\+::handle\+Event (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Handle input for template/flag selection and placement 
+
+Implements \mbox{\hyperlink{classscene_1_1_scene_ad66c34d8683155bb95590b284082c055}{scene\+::\+Scene}}.
+
+\Hypertarget{classscene_1_1_editor_scene_abb634362348fa2a43ade66312da1b3cf}\index{scene::EditorScene@{scene::EditorScene}!render@{render}}
+\index{render@{render}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_abb634362348fa2a43ade66312da1b3cf} 
+override void scene\+::\+Editor\+Scene\+::render (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Render editor UI and flag picker 
+
+Implements \mbox{\hyperlink{classscene_1_1_scene_a1c0c725ed20a4f8452536def42057193}{scene\+::\+Scene}}.
+
+\Hypertarget{classscene_1_1_editor_scene_a9772e1e443cdc6ede5f9796c8616fb47}\index{scene::EditorScene@{scene::EditorScene}!saveScene@{saveScene}}
+\index{saveScene@{saveScene}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{saveScene()}{saveScene()}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_a9772e1e443cdc6ede5f9796c8616fb47} 
+void scene\+::\+Editor\+Scene\+::save\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Serialize placed objects \& flags to JSON file \Hypertarget{classscene_1_1_editor_scene_a0c9ffa757d0fd443d099773ac5dde975}\index{scene::EditorScene@{scene::EditorScene}!setCurrentFlags@{setCurrentFlags}}
+\index{setCurrentFlags@{setCurrentFlags}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{setCurrentFlags()}{setCurrentFlags()}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_a0c9ffa757d0fd443d099773ac5dde975} 
+void scene\+::\+Editor\+Scene\+::set\+Current\+Flags (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initialize flags for the selected template \Hypertarget{classscene_1_1_editor_scene_a97aa8941c20cb21fe8e9758636fa330f}\index{scene::EditorScene@{scene::EditorScene}!setupScene@{setupScene}}
+\index{setupScene@{setupScene}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{setupScene()}{setupScene()}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_a97aa8941c20cb21fe8e9758636fa330f} 
+void scene\+::\+Editor\+Scene\+::setup\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Setup the scene tree and background for the scene \Hypertarget{classscene_1_1_editor_scene_a5e68358b5e9bc328f26c65c82963ecf8}\index{scene::EditorScene@{scene::EditorScene}!update@{update}}
+\index{update@{update}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_a5e68358b5e9bc328f26c65c82963ecf8} 
+override void scene\+::\+Editor\+Scene\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+No per-\/frame logic 
+
+Implements \mbox{\hyperlink{classscene_1_1_scene_a60131f825961f1ca231bcf2b26c72b51}{scene\+::\+Scene}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classscene_1_1_editor_scene_a172eaae235960bd2f61b0620aaa625be}\index{scene::EditorScene@{scene::EditorScene}!currentFlags@{currentFlags}}
+\index{currentFlags@{currentFlags}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{currentFlags}{currentFlags}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_a172eaae235960bd2f61b0620aaa625be} 
+string \mbox{[}$\,$\mbox{]} scene\+::\+Editor\+Scene\+::current\+Flags}
+
+Flags for current template \Hypertarget{classscene_1_1_editor_scene_aebe80c169a8727ed1cff4282fbc82862}\index{scene::EditorScene@{scene::EditorScene}!flagsSelected@{flagsSelected}}
+\index{flagsSelected@{flagsSelected}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{flagsSelected}{flagsSelected}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_aebe80c169a8727ed1cff4282fbc82862} 
+bool \mbox{[}$\,$\mbox{]} scene\+::\+Editor\+Scene\+::flags\+Selected}
+
+Which flags are active bitmask selection \Hypertarget{classscene_1_1_editor_scene_ae25146f52f72ddd7dca44891f48d7b57}\index{scene::EditorScene@{scene::EditorScene}!font@{font}}
+\index{font@{font}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_ae25146f52f72ddd7dca44891f48d7b57} 
+TTF\+\_\+\+Font\texorpdfstring{$\ast$}{*} scene\+::\+Editor\+Scene\+::font}
+
+Font for UI text \Hypertarget{classscene_1_1_editor_scene_a20bc67ef64e78499802aaf9e6289ace6}\index{scene::EditorScene@{scene::EditorScene}!popupStage@{popupStage}}
+\index{popupStage@{popupStage}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{popupStage}{popupStage}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_a20bc67ef64e78499802aaf9e6289ace6} 
+int scene\+::\+Editor\+Scene\+::popup\+Stage}
+
+Mode\+: 0 = picking, 1 = placing \Hypertarget{classscene_1_1_editor_scene_a2f13fcf6750ab5e4e81c036c84f743ec}\index{scene::EditorScene@{scene::EditorScene}!saveBtnRect@{saveBtnRect}}
+\index{saveBtnRect@{saveBtnRect}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{saveBtnRect}{saveBtnRect}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_a2f13fcf6750ab5e4e81c036c84f743ec} 
+SDL\+\_\+\+Rect scene\+::\+Editor\+Scene\+::save\+Btn\+Rect}
+
+"{}\+Save"{} button rect \& texture \Hypertarget{classscene_1_1_editor_scene_a1d30f7fd08bafd8684ed04bae27db42d}\index{scene::EditorScene@{scene::EditorScene}!selFlag@{selFlag}}
+\index{selFlag@{selFlag}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{selFlag}{selFlag}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_a1d30f7fd08bafd8684ed04bae27db42d} 
+size\+\_\+t scene\+::\+Editor\+Scene\+::sel\+Flag}
+
+Currently highlighted flag index \Hypertarget{classscene_1_1_editor_scene_a7ac2b64839dc51aec756352df0523ccd}\index{scene::EditorScene@{scene::EditorScene}!selTemplate@{selTemplate}}
+\index{selTemplate@{selTemplate}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{selTemplate}{selTemplate}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_a7ac2b64839dc51aec756352df0523ccd} 
+size\+\_\+t scene\+::\+Editor\+Scene\+::sel\+Template}
+
+Currently highlighted template index \Hypertarget{classscene_1_1_editor_scene_a50313bc8879b9c72ebb4ae3c9fe0d803}\index{scene::EditorScene@{scene::EditorScene}!templates@{templates}}
+\index{templates@{templates}!scene::EditorScene@{scene::EditorScene}}
+\doxysubsubsection{\texorpdfstring{templates}{templates}}
+{\footnotesize\ttfamily \label{classscene_1_1_editor_scene_a50313bc8879b9c72ebb4ae3c9fe0d803} 
+string \mbox{[}$\,$\mbox{]} scene\+::\+Editor\+Scene\+::templates}
+
+
+
+ditto 
+
+Available template names 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/scene.\+d\end{DoxyCompactItemize}

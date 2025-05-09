@@ -1,0 +1,205 @@
+\doxysection{Game\+Application Class Reference}
+\hypertarget{class_game_application}{}\label{class_game_application}\index{GameApplication@{GameApplication}}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_application_abe84b496051f1d68bfca250529c59ef8}{this}} (string title, string\mbox{[}$\,$\mbox{]} args)
+\item 
+\mbox{\hyperlink{class_game_application_a049bc8c1a681a9380aa85f2ca26c6034}{\texorpdfstring{$\sim$}{\string~}this}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_application_a8f19f6d953c638f4e983a10b8851bd7f}{load\+Resources}} ()
+\item 
+void \mbox{\hyperlink{class_game_application_a6387322b118fd16c95d308cda31cf4df}{load\+Scene}} (string scene\+File\+Path)
+\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \mbox{\hyperlink{class_game_application_ac8d461352bffa45379ba4ab3045b9797}{Initialize\+Object}} (string name, int \+\_\+x, int \+\_\+y, int \+\_\+w, int \+\_\+h, string script, int mask)
+\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \mbox{\hyperlink{class_game_application_a4f703196976afbfb689e86d2f3e46815}{Create\+Projectile}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} creator, int change, int mask)
+\item 
+void \mbox{\hyperlink{class_game_application_a63dd16105d902a623fd5571f20f16057}{Input}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{class_game_application_aa41e32bb8cc5e4df0639a34abe397c9c}{Update}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{class_game_application_a50acb3ea90f7e26177c65d668d33b5fc}{Render}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{class_game_application_aada8f3529b125275b3ef1f27c2288356}{Advance\+Frame}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{class_game_application_a6a248734231421a03d6a24b647b8c5b9}{Run\+Loop}} ()
+\item 
+void \mbox{\hyperlink{class_game_application_ae5531524af62bbe8e710761b2544930f}{switch\+Scene}} (\mbox{\hyperlink{class_scene}{Scene}} new\+Scene)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_game_application_a39fae0ea0d816e1232e4af4ed4b018b4}{m\+Args}}
+\item 
+SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_application_a6f84d43f6ad746fb7d39b8008ac2b8fa}{m\+Window}} = null
+\item 
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_application_a23382968a1d45e0e7e0ed8e732811adb}{m\+Renderer}} = null
+\item 
+bool \mbox{\hyperlink{class_game_application_a1c0cc9c0d0243e4788ab1e1dc53af999}{m\+Game\+Is\+Running}} = true
+\item 
+int \mbox{\hyperlink{class_game_application_aaf43c353c063073ca21c27dd2182dda6}{WWidth}} = \mbox{\hyperlink{configuation_8d_a5cd9d67cc7c0bb69210d9367c1297a29}{FULL\+\_\+\+WORLD\+\_\+\+WIDTH}}
+\item 
+int \mbox{\hyperlink{class_game_application_adae86a247d3aa039b955df36c9023859}{WHeight}} = \mbox{\hyperlink{configuation_8d_a7f7028e38ec79ed01e473e7b0cef4855}{FULL\+\_\+\+WORLD\+\_\+\+HEIGHT}}
+\item 
+\mbox{\hyperlink{class_scene}{Scene}} \mbox{\hyperlink{class_game_application_a2dc87e8eddcb29c67071caafc87a03f2}{current\+Scene}}
+\item 
+shared int \mbox{\hyperlink{class_game_application_aa93aa31c3234d1487a12a4015bde0a61}{m\+Obj\+ID}} = 0
+\item 
+Resource\+Manager \mbox{\hyperlink{class_game_application_a80a0f4d7620de5494837de143c021dfa}{rm}}
+\item 
+Template\+Manager \mbox{\hyperlink{class_game_application_ae28aa56a948fd9c5b16667a34d5ac901}{tm}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{class_game_application}{Game\+Application} Manages the window setup, resource / template loading, scene switching, and the main game loop 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_application_abe84b496051f1d68bfca250529c59ef8}\index{GameApplication@{GameApplication}!this@{this}}
+\index{this@{this}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{class_game_application_abe84b496051f1d68bfca250529c59ef8} 
+Game\+Application\+::this (\begin{DoxyParamCaption}\item[{string}]{title}{, }\item[{string\mbox{[}$\,$\mbox{]}}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Constructor, initializes SDL, TTF, Mixer, resources, templates, and the main menu Params\+: title = Game Title args = Command line arguments \Hypertarget{class_game_application_a049bc8c1a681a9380aa85f2ca26c6034}\index{GameApplication@{GameApplication}!````~this@{\texorpdfstring{$\sim$}{\string~}this}}
+\index{````~this@{\texorpdfstring{$\sim$}{\string~}this}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}this()}{\string~this()}}
+{\footnotesize\ttfamily \label{class_game_application_a049bc8c1a681a9380aa85f2ca26c6034} 
+Game\+Application\+::\texorpdfstring{$\sim$}{\string~}this (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_application_aada8f3529b125275b3ef1f27c2288356}\index{GameApplication@{GameApplication}!AdvanceFrame@{AdvanceFrame}}
+\index{AdvanceFrame@{AdvanceFrame}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{AdvanceFrame()}{AdvanceFrame()}}
+{\footnotesize\ttfamily \label{class_game_application_aada8f3529b125275b3ef1f27c2288356} 
+void Game\+Application\+::\+Advance\+Frame (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Advance world one frame at a time \Hypertarget{class_game_application_a4f703196976afbfb689e86d2f3e46815}\index{GameApplication@{GameApplication}!CreateProjectile@{CreateProjectile}}
+\index{CreateProjectile@{CreateProjectile}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{CreateProjectile()}{CreateProjectile()}}
+{\footnotesize\ttfamily \label{class_game_application_a4f703196976afbfb689e86d2f3e46815} 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} Game\+Application\+::\+Create\+Projectile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}}}]{creator}{, }\item[{int}]{change}{, }\item[{int}]{mask}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Create and instance of a projectile Params\+: creator = Object which is shooting the projectile change = Degree of difference between creator\textquotesingle{}s rotation angle and the projectile spawn mask = Bitmask of flags for the projectile Returns\+: The created projectile \Hypertarget{class_game_application_ac8d461352bffa45379ba4ab3045b9797}\index{GameApplication@{GameApplication}!InitializeObject@{InitializeObject}}
+\index{InitializeObject@{InitializeObject}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{InitializeObject()}{InitializeObject()}}
+{\footnotesize\ttfamily \label{class_game_application_ac8d461352bffa45379ba4ab3045b9797} 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} Game\+Application\+::\+Initialize\+Object (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{int}]{\+\_\+x}{, }\item[{int}]{\+\_\+y}{, }\item[{int}]{\+\_\+w}{, }\item[{int}]{\+\_\+h}{, }\item[{string}]{script}{, }\item[{int}]{mask}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Create an instance of a game object and save it to the scene tree Params\+: name = Template Name \+\_\+x = X Position \+\_\+y = Y Position \+\_\+w = Width \+\_\+h = Height script = Script name mask = Bitmask of flags Returns\+: The created object \Hypertarget{class_game_application_a63dd16105d902a623fd5571f20f16057}\index{GameApplication@{GameApplication}!Input@{Input}}
+\index{Input@{Input}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily \label{class_game_application_a63dd16105d902a623fd5571f20f16057} 
+void Game\+Application\+::\+Input (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Poll SDL events and pass them to the current scene Params\+: delta\+Time = Change of time between scenes \Hypertarget{class_game_application_a8f19f6d953c638f4e983a10b8851bd7f}\index{GameApplication@{GameApplication}!loadResources@{loadResources}}
+\index{loadResources@{loadResources}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{loadResources()}{loadResources()}}
+{\footnotesize\ttfamily \label{class_game_application_a8f19f6d953c638f4e983a10b8851bd7f} 
+void Game\+Application\+::load\+Resources (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Preload our texture assets \Hypertarget{class_game_application_a6387322b118fd16c95d308cda31cf4df}\index{GameApplication@{GameApplication}!loadScene@{loadScene}}
+\index{loadScene@{loadScene}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{loadScene()}{loadScene()}}
+{\footnotesize\ttfamily \label{class_game_application_a6387322b118fd16c95d308cda31cf4df} 
+void Game\+Application\+::load\+Scene (\begin{DoxyParamCaption}\item[{string}]{scene\+File\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Deserialize a scene\textquotesingle{}s JSON file and spawn all game objects Params\+: scene\+File\+Path = A path to a JSON file \Hypertarget{class_game_application_a50acb3ea90f7e26177c65d668d33b5fc}\index{GameApplication@{GameApplication}!Render@{Render}}
+\index{Render@{Render}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily \label{class_game_application_a50acb3ea90f7e26177c65d668d33b5fc} 
+void Game\+Application\+::\+Render (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Render the current scene Params\+: delta\+Time = Change of time between scenes \Hypertarget{class_game_application_a6a248734231421a03d6a24b647b8c5b9}\index{GameApplication@{GameApplication}!RunLoop@{RunLoop}}
+\index{RunLoop@{RunLoop}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{RunLoop()}{RunLoop()}}
+{\footnotesize\ttfamily \label{class_game_application_a6a248734231421a03d6a24b647b8c5b9} 
+void Game\+Application\+::\+Run\+Loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Run the main loop at 60 fps \Hypertarget{class_game_application_ae5531524af62bbe8e710761b2544930f}\index{GameApplication@{GameApplication}!switchScene@{switchScene}}
+\index{switchScene@{switchScene}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{switchScene()}{switchScene()}}
+{\footnotesize\ttfamily \label{class_game_application_ae5531524af62bbe8e710761b2544930f} 
+void Game\+Application\+::switch\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}}}]{new\+Scene}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Switch to new scene Params\+: new\+Scene = New scene to switch to \Hypertarget{class_game_application_aa41e32bb8cc5e4df0639a34abe397c9c}\index{GameApplication@{GameApplication}!Update@{Update}}
+\index{Update@{Update}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_game_application_aa41e32bb8cc5e4df0639a34abe397c9c} 
+void Game\+Application\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Update game and objects Params\+: delta\+Time = Change of time between scenes 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_game_application_a2dc87e8eddcb29c67071caafc87a03f2}\index{GameApplication@{GameApplication}!currentScene@{currentScene}}
+\index{currentScene@{currentScene}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{currentScene}{currentScene}}
+{\footnotesize\ttfamily \label{class_game_application_a2dc87e8eddcb29c67071caafc87a03f2} 
+\mbox{\hyperlink{class_scene}{Scene}} Game\+Application\+::current\+Scene\hspace{0.3cm}{\ttfamily [private]}}
+
+Current active scene \Hypertarget{class_game_application_a39fae0ea0d816e1232e4af4ed4b018b4}\index{GameApplication@{GameApplication}!mArgs@{mArgs}}
+\index{mArgs@{mArgs}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{mArgs}{mArgs}}
+{\footnotesize\ttfamily \label{class_game_application_a39fae0ea0d816e1232e4af4ed4b018b4} 
+string \mbox{[}$\,$\mbox{]} Game\+Application\+::m\+Args\hspace{0.3cm}{\ttfamily [private]}}
+
+Command Line Arguments \Hypertarget{class_game_application_a1c0cc9c0d0243e4788ab1e1dc53af999}\index{GameApplication@{GameApplication}!mGameIsRunning@{mGameIsRunning}}
+\index{mGameIsRunning@{mGameIsRunning}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{mGameIsRunning}{mGameIsRunning}}
+{\footnotesize\ttfamily \label{class_game_application_a1c0cc9c0d0243e4788ab1e1dc53af999} 
+bool Game\+Application\+::m\+Game\+Is\+Running = true\hspace{0.3cm}{\ttfamily [private]}}
+
+Whether or not game is running \Hypertarget{class_game_application_aa93aa31c3234d1487a12a4015bde0a61}\index{GameApplication@{GameApplication}!mObjID@{mObjID}}
+\index{mObjID@{mObjID}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{mObjID}{mObjID}}
+{\footnotesize\ttfamily \label{class_game_application_aa93aa31c3234d1487a12a4015bde0a61} 
+shared int Game\+Application\+::m\+Obj\+ID = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+Game Object ID \Hypertarget{class_game_application_a23382968a1d45e0e7e0ed8e732811adb}\index{GameApplication@{GameApplication}!mRenderer@{mRenderer}}
+\index{mRenderer@{mRenderer}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{mRenderer}{mRenderer}}
+{\footnotesize\ttfamily \label{class_game_application_a23382968a1d45e0e7e0ed8e732811adb} 
+SDL\+\_\+\+Renderer\texorpdfstring{$\ast$}{*} Game\+Application\+::m\+Renderer = null\hspace{0.3cm}{\ttfamily [private]}}
+
+SDL Renderer \Hypertarget{class_game_application_a6f84d43f6ad746fb7d39b8008ac2b8fa}\index{GameApplication@{GameApplication}!mWindow@{mWindow}}
+\index{mWindow@{mWindow}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{mWindow}{mWindow}}
+{\footnotesize\ttfamily \label{class_game_application_a6f84d43f6ad746fb7d39b8008ac2b8fa} 
+SDL\+\_\+\+Window\texorpdfstring{$\ast$}{*} Game\+Application\+::m\+Window = null\hspace{0.3cm}{\ttfamily [private]}}
+
+SDL Window \Hypertarget{class_game_application_a80a0f4d7620de5494837de143c021dfa}\index{GameApplication@{GameApplication}!rm@{rm}}
+\index{rm@{rm}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{rm}{rm}}
+{\footnotesize\ttfamily \label{class_game_application_a80a0f4d7620de5494837de143c021dfa} 
+Resource\+Manager Game\+Application\+::rm\hspace{0.3cm}{\ttfamily [private]}}
+
+Resource Manager \Hypertarget{class_game_application_ae28aa56a948fd9c5b16667a34d5ac901}\index{GameApplication@{GameApplication}!tm@{tm}}
+\index{tm@{tm}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{tm}{tm}}
+{\footnotesize\ttfamily \label{class_game_application_ae28aa56a948fd9c5b16667a34d5ac901} 
+Template\+Manager Game\+Application\+::tm\hspace{0.3cm}{\ttfamily [private]}}
+
+Template Manager \Hypertarget{class_game_application_adae86a247d3aa039b955df36c9023859}\index{GameApplication@{GameApplication}!WHeight@{WHeight}}
+\index{WHeight@{WHeight}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{WHeight}{WHeight}}
+{\footnotesize\ttfamily \label{class_game_application_adae86a247d3aa039b955df36c9023859} 
+int Game\+Application\+::\+WHeight = \mbox{\hyperlink{configuation_8d_a7f7028e38ec79ed01e473e7b0cef4855}{FULL\+\_\+\+WORLD\+\_\+\+HEIGHT}}\hspace{0.3cm}{\ttfamily [private]}}
+
+SDL Window Height \Hypertarget{class_game_application_aaf43c353c063073ca21c27dd2182dda6}\index{GameApplication@{GameApplication}!WWidth@{WWidth}}
+\index{WWidth@{WWidth}!GameApplication@{GameApplication}}
+\doxysubsubsection{\texorpdfstring{WWidth}{WWidth}}
+{\footnotesize\ttfamily \label{class_game_application_aaf43c353c063073ca21c27dd2182dda6} 
+int Game\+Application\+::\+WWidth = \mbox{\hyperlink{configuation_8d_a5cd9d67cc7c0bb69210d9367c1297a29}{FULL\+\_\+\+WORLD\+\_\+\+WIDTH}}\hspace{0.3cm}{\ttfamily [private]}}
+
+SDL Window width 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{gameapplication_8d}{gameapplication.\+d}}\end{DoxyCompactItemize}

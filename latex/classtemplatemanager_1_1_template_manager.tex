@@ -1,0 +1,48 @@
+\doxysection{templatemanager\+::Template\+Manager Class Reference}
+\hypertarget{classtemplatemanager_1_1_template_manager}{}\label{classtemplatemanager_1_1_template_manager}\index{templatemanager::TemplateManager@{templatemanager::TemplateManager}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtemplatemanager_1_1_template_manager_abb68ee7d9213a50c7c1c7cb7090ac450}{load\+Templates}} (string filepath)
+\item 
+bool \mbox{\hyperlink{classtemplatemanager_1_1_template_manager_a5446d0945343277eb6c1478315c42022}{template\+Saved}} (string name)
+\item 
+\mbox{\hyperlink{structtemplatemanager_1_1_obj_template}{Obj\+Template}} \mbox{\hyperlink{classtemplatemanager_1_1_template_manager_a8a2c0227853a79c3377e9a77252b8fbc}{get\+Obj\+Temp}} (string name)
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classtemplatemanager_1_1_template_manager_a5b536f09b7993ed0a746526b92c4f07d}{get\+All\+Template\+Names}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{classtemplatemanager_1_1_template_manager}{Template\+Manager} Holds all object templates loaded from JSON 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtemplatemanager_1_1_template_manager_a5b536f09b7993ed0a746526b92c4f07d}\index{templatemanager::TemplateManager@{templatemanager::TemplateManager}!getAllTemplateNames@{getAllTemplateNames}}
+\index{getAllTemplateNames@{getAllTemplateNames}!templatemanager::TemplateManager@{templatemanager::TemplateManager}}
+\doxysubsubsection{\texorpdfstring{getAllTemplateNames()}{getAllTemplateNames()}}
+{\footnotesize\ttfamily \label{classtemplatemanager_1_1_template_manager_a5b536f09b7993ed0a746526b92c4f07d} 
+string\mbox{[}$\,$\mbox{]} templatemanager\+::\+Template\+Manager\+::get\+All\+Template\+Names (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+List all template names Returns\+: Array of keys \Hypertarget{classtemplatemanager_1_1_template_manager_a8a2c0227853a79c3377e9a77252b8fbc}\index{templatemanager::TemplateManager@{templatemanager::TemplateManager}!getObjTemp@{getObjTemp}}
+\index{getObjTemp@{getObjTemp}!templatemanager::TemplateManager@{templatemanager::TemplateManager}}
+\doxysubsubsection{\texorpdfstring{getObjTemp()}{getObjTemp()}}
+{\footnotesize\ttfamily \label{classtemplatemanager_1_1_template_manager_a8a2c0227853a79c3377e9a77252b8fbc} 
+\mbox{\hyperlink{structtemplatemanager_1_1_obj_template}{Obj\+Template}} templatemanager\+::\+Template\+Manager\+::get\+Obj\+Temp (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieve a template definition Params\+: name = Template key Returns\+: \doxylink{structtemplatemanager_1_1_obj_template}{Obj\+Template} \Hypertarget{classtemplatemanager_1_1_template_manager_abb68ee7d9213a50c7c1c7cb7090ac450}\index{templatemanager::TemplateManager@{templatemanager::TemplateManager}!loadTemplates@{loadTemplates}}
+\index{loadTemplates@{loadTemplates}!templatemanager::TemplateManager@{templatemanager::TemplateManager}}
+\doxysubsubsection{\texorpdfstring{loadTemplates()}{loadTemplates()}}
+{\footnotesize\ttfamily \label{classtemplatemanager_1_1_template_manager_abb68ee7d9213a50c7c1c7cb7090ac450} 
+void templatemanager\+::\+Template\+Manager\+::load\+Templates (\begin{DoxyParamCaption}\item[{string}]{filepath}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Load all templates from a JSON file. Params\+: filepath = Path to template JSON. \Hypertarget{classtemplatemanager_1_1_template_manager_a5446d0945343277eb6c1478315c42022}\index{templatemanager::TemplateManager@{templatemanager::TemplateManager}!templateSaved@{templateSaved}}
+\index{templateSaved@{templateSaved}!templatemanager::TemplateManager@{templatemanager::TemplateManager}}
+\doxysubsubsection{\texorpdfstring{templateSaved()}{templateSaved()}}
+{\footnotesize\ttfamily \label{classtemplatemanager_1_1_template_manager_a5446d0945343277eb6c1478315c42022} 
+bool templatemanager\+::\+Template\+Manager\+::template\+Saved (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if a template exists Params\+: name = Template key Returns\+: True if loaded 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/templatemanager.\+d\end{DoxyCompactItemize}

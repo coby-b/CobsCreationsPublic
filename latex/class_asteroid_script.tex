@@ -1,0 +1,71 @@
+\doxysection{Asteroid\+Script Class Reference}
+\hypertarget{class_asteroid_script}{}\label{class_asteroid_script}\index{AsteroidScript@{AsteroidScript}}
+Inheritance diagram for Asteroid\+Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_asteroid_script}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_asteroid_script_a27eea1982bfaba5beade21b0921f3ee6}{this}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} owner)
+\item 
+override void \mbox{\hyperlink{class_asteroid_script_a01f08b67baa526927ffcb38e912f3ede}{update}} (float delta\+Time)
+\item 
+override void \mbox{\hyperlink{class_asteroid_script_adee9a8f3b688562b0af63cf6135c5a96}{input}} (SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}event, float delta\+Time)
+\item 
+void \mbox{\hyperlink{class_asteroid_script_adf3392434f33902353c0ca9a9005ceda}{respawn\+Asteroid}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structvec2d}{vec2d}} \mbox{\hyperlink{class_asteroid_script_ad943f5a677203e396329b4445c1695ff}{velocity}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{class_asteroid_script}{Asteroid\+Script} Applies randomized velocity to asteroids, handles boundary bouncing, and respawns upon destruction 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_asteroid_script_a27eea1982bfaba5beade21b0921f3ee6}\index{AsteroidScript@{AsteroidScript}!this@{this}}
+\index{this@{this}!AsteroidScript@{AsteroidScript}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{class_asteroid_script_a27eea1982bfaba5beade21b0921f3ee6} 
+Asteroid\+Script\+::this (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}}}]{owner}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Construct an \doxylink{class_asteroid_script}{Asteroid\+Script} with random initial velocity modified by flags Params\+: owner = The \doxylink{class_game_object}{Game\+Object} this script is attached to 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_asteroid_script_adee9a8f3b688562b0af63cf6135c5a96}\index{AsteroidScript@{AsteroidScript}!input@{input}}
+\index{input@{input}!AsteroidScript@{AsteroidScript}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily \label{class_asteroid_script_adee9a8f3b688562b0af63cf6135c5a96} 
+override void Asteroid\+Script\+::input (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}}]{event}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Input handler (unused for asteroids) \Hypertarget{class_asteroid_script_adf3392434f33902353c0ca9a9005ceda}\index{AsteroidScript@{AsteroidScript}!respawnAsteroid@{respawnAsteroid}}
+\index{respawnAsteroid@{respawnAsteroid}!AsteroidScript@{AsteroidScript}}
+\doxysubsubsection{\texorpdfstring{respawnAsteroid()}{respawnAsteroid()}}
+{\footnotesize\ttfamily \label{class_asteroid_script_adf3392434f33902353c0ca9a9005ceda} 
+void Asteroid\+Script\+::respawn\+Asteroid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Respawn the asteroid at a random position within the world bounds and reactivate it \Hypertarget{class_asteroid_script_a01f08b67baa526927ffcb38e912f3ede}\index{AsteroidScript@{AsteroidScript}!update@{update}}
+\index{update@{update}!AsteroidScript@{AsteroidScript}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_asteroid_script_a01f08b67baa526927ffcb38e912f3ede} 
+override void Asteroid\+Script\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Update asteroid position and bounce off edges of the world bounds Params\+: delta\+Time = Time elapsed since last frame, in seconds 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_asteroid_script_ad943f5a677203e396329b4445c1695ff}\index{AsteroidScript@{AsteroidScript}!velocity@{velocity}}
+\index{velocity@{velocity}!AsteroidScript@{AsteroidScript}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily \label{class_asteroid_script_ad943f5a677203e396329b4445c1695ff} 
+\mbox{\hyperlink{structvec2d}{vec2d}} Asteroid\+Script\+::velocity\hspace{0.3cm}{\ttfamily [private]}}
+
+Current velocity vector of the asteroid 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/scripts/\mbox{\hyperlink{asteroidscript_8d}{asteroidscript.\+d}}\end{DoxyCompactItemize}

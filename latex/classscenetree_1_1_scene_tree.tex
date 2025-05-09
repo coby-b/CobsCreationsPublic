@@ -1,0 +1,57 @@
+\doxysection{scenetree\+::Scene\+Tree Class Reference}
+\hypertarget{classscenetree_1_1_scene_tree}{}\label{classscenetree_1_1_scene_tree}\index{scenetree::SceneTree@{scenetree::SceneTree}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classscenetree_1_1_scene_tree_ac760295448f6433dd9a7357cea2f19cd}{this}} ()
+\item 
+void \mbox{\hyperlink{classscenetree_1_1_scene_tree_ab78bc6f5ab0489116552e5bfb49b4f3d}{add\+Object}} (Game\+Object obj)
+\item 
+void \mbox{\hyperlink{classscenetree_1_1_scene_tree_a8b0b55183bb7109934da1fe25b4fab0d}{traverse\+Tree}} (void delegate(Game\+Object) func)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Scene\+Object \mbox{\hyperlink{classscenetree_1_1_scene_tree_ac31be7500d2312da9f28665bbe709d07}{root\+Object}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{classscenetree_1_1_scene_tree}{Scene\+Tree} Holds all Scene\+Object nodes under a dummy root for scene traversal 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classscenetree_1_1_scene_tree_ac760295448f6433dd9a7357cea2f19cd}\index{scenetree::SceneTree@{scenetree::SceneTree}!this@{this}}
+\index{this@{this}!scenetree::SceneTree@{scenetree::SceneTree}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{classscenetree_1_1_scene_tree_ac760295448f6433dd9a7357cea2f19cd} 
+scenetree\+::\+Scene\+Tree\+::this (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct an empty \doxylink{classscenetree_1_1_scene_tree}{Scene\+Tree} with a null root 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classscenetree_1_1_scene_tree_ab78bc6f5ab0489116552e5bfb49b4f3d}\index{scenetree::SceneTree@{scenetree::SceneTree}!addObject@{addObject}}
+\index{addObject@{addObject}!scenetree::SceneTree@{scenetree::SceneTree}}
+\doxysubsubsection{\texorpdfstring{addObject()}{addObject()}}
+{\footnotesize\ttfamily \label{classscenetree_1_1_scene_tree_ab78bc6f5ab0489116552e5bfb49b4f3d} 
+void scenetree\+::\+Scene\+Tree\+::add\+Object (\begin{DoxyParamCaption}\item[{Game\+Object}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a Game\+Object to the root of the scene graph Params\+: obj = Game\+Object to add \Hypertarget{classscenetree_1_1_scene_tree_a8b0b55183bb7109934da1fe25b4fab0d}\index{scenetree::SceneTree@{scenetree::SceneTree}!traverseTree@{traverseTree}}
+\index{traverseTree@{traverseTree}!scenetree::SceneTree@{scenetree::SceneTree}}
+\doxysubsubsection{\texorpdfstring{traverseTree()}{traverseTree()}}
+{\footnotesize\ttfamily \label{classscenetree_1_1_scene_tree_a8b0b55183bb7109934da1fe25b4fab0d} 
+void scenetree\+::\+Scene\+Tree\+::traverse\+Tree (\begin{DoxyParamCaption}\item[{void delegate(Game\+Object)}]{func}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Traverse every Game\+Object in the scene graph Params\+: func = Delegate to invoke on each Game\+Object 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classscenetree_1_1_scene_tree_ac31be7500d2312da9f28665bbe709d07}\index{scenetree::SceneTree@{scenetree::SceneTree}!rootObject@{rootObject}}
+\index{rootObject@{rootObject}!scenetree::SceneTree@{scenetree::SceneTree}}
+\doxysubsubsection{\texorpdfstring{rootObject}{rootObject}}
+{\footnotesize\ttfamily \label{classscenetree_1_1_scene_tree_ac31be7500d2312da9f28665bbe709d07} 
+Scene\+Object scenetree\+::\+Scene\+Tree\+::root\+Object}
+
+Dummy root node whose obj is always null 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/scenetree.\+d\end{DoxyCompactItemize}

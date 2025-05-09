@@ -1,0 +1,57 @@
+{
+	"sceneName": "Level 1",
+	"entities": [
+	{
+		"template": "background",
+		"x": 0,
+		"y": 0
+	},
+	{
+		"template": "player",
+		"x": 600,
+		"y": 400,
+		"script": "playerscript",
+		"flags": 5
+	},
+	{
+		"template": "aliens",
+		"x": 200,
+		"y": 150,
+		"rotation": 15,
+		"script": "asteroidscript",
+		"flags": 5
+	},
+	{
+		"template": "aliens",
+		"x": 1000,
+		"y": 150,
+		"rotation": 45,
+		"script": "asteroidscript",
+		"flags": 5
+	},
+	{
+		"template": "aliens",
+		"x": 300,
+		"y": 600,
+		"rotation": 90,
+		"script": "asteroidscript",
+		"flags": 24
+	},
+    {
+		"template": "aliens",
+		"x": 1000,
+		"y": 150,
+		"rotation": 45,
+		"script": "asteroidscript",
+		"flags": 8
+	},
+    {
+		"template": "aliens",
+		"x": 1000,
+		"y": 150,
+		"rotation": 45,
+		"script": "asteroidscript",
+		"flags": 16
+	}
+]
+}

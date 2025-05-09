@@ -1,0 +1,334 @@
+\doxysection{source/scene.d File Reference}
+\hypertarget{scene_8d}{}\label{scene_8d}\index{source/scene.d@{source/scene.d}}
+{\ttfamily import bindbc.\+sdl.\+bind.\+sdlevents;}\newline
+{\ttfamily import std.\+conv;}\newline
+{\ttfamily import std.\+format;}\newline
+{\ttfamily import configuration;}\newline
+{\ttfamily import templatemanager;}\newline
+{\ttfamily import gameapplication;}\newline
+{\ttfamily import gameobject;}\newline
+{\ttfamily import scenetree;}\newline
+{\ttfamily import camera;}\newline
+{\ttfamily import vector;}\newline
+{\ttfamily import component;}\newline
+{\ttfamily import std.\+stdio;}\newline
+{\ttfamily import std.\+random;}\newline
+{\ttfamily import std.\+string;}\newline
+{\ttfamily import std.\+json;}\newline
+{\ttfamily import std.\+file\+:write;}\newline
+{\ttfamily import scripts.\+asteroidscript;}\newline
+{\ttfamily import scripts.\+script;}\newline
+{\ttfamily import bindbc.\+sdl;}\newline
+{\ttfamily import bindbc.\+sdl.\+ttf;}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_scene}{Scene}}
+\item 
+class \mbox{\hyperlink{class_game_scene}{Game\+Scene}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{scene_8d_abf960f250836ceb4300bd059052801d2}{this}} (\mbox{\hyperlink{class_game_application}{Game\+Application}} g)
+\item 
+void \mbox{\hyperlink{scene_8d_a5bcd980457c642b1e214b7d04156bade}{make\+Btn}} (ref SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}btn\+Tex, ref SDL\+\_\+\+Rect txt\+Rect, string label, SDL\+\_\+\+Rect btn\+Rect)
+\item 
+override void \mbox{\hyperlink{scene_8d_ac068fc0166eb41af93fecc45885cf7f1}{cleanup}} ()
+\item 
+\mbox{\hyperlink{scene_8d_a82bd52df216cb0ac423592280022cbcf}{\texorpdfstring{$\sim$}{\string~}this}} ()
+\item 
+override void \mbox{\hyperlink{scene_8d_a5de91005825c9105f869f5bacd02b7b8}{handle\+Event}} (SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}event, float delta\+Time)
+\item 
+override void \mbox{\hyperlink{scene_8d_aaa65052c6b5baaf7cdc3c35c3da85989}{update}} (float delta\+Time)
+\item 
+override void \mbox{\hyperlink{scene_8d_ac76e48ccba68ddc517c4ab6e30b1f7d9}{render}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{scene_8d_aa8282e07b3588f21a8b10caac984f3ec}{setup\+Scene}} ()
+\item 
+void \mbox{\hyperlink{scene_8d_ac73887c94870e8d5874dcf184526d453}{set\+Current\+Flags}} ()
+\item 
+void \mbox{\hyperlink{scene_8d_a2a80de60eb1bba8ca8b5be15ea5b2fbf}{save\+Scene}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+abstract class \mbox{\hyperlink{class_scene}{Scene}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{scene_8d_a6b71272d189668d2efdab3562c45e828}{font}}
+\begin{DoxyCompactList}\small\item\em TTF Font that is used in scene. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{scene_8d_ab8a842fce227d5491cb06e0fae81ddb3}{play\+Def\+Rect}}
+\begin{DoxyCompactList}\small\item\em Rectangle for the "{}\+Play"{} button. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{scene_8d_a510ce7e92940e14963873f452ea527bd}{play\+Def\+Tex}}
+\begin{DoxyCompactList}\small\item\em Texture for the "{}\+Play"{} button. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{scene_8d_a42b0319a8d9090855990d0de58a7b207}{play\+Def\+Text}}
+\begin{DoxyCompactList}\small\item\em Rectangle for the "{}\+Play"{} button text. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{scene_8d_aaf2bda8cc8b3d61b6fb9b3acd295f892}{build\+Cust\+Rect}}
+\begin{DoxyCompactList}\small\item\em Rectangle for the "{}\+Build Custom"{} button. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{scene_8d_a14fe4b806aa7781db9bbb740727fdda1}{build\+Cust\+Tex}}
+\begin{DoxyCompactList}\small\item\em Texture for the "{}\+Build Custom"{} button. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{scene_8d_a2538ef765a2f3a51f32446107a4b90b0}{build\+Cust\+Text}}
+\begin{DoxyCompactList}\small\item\em Rectangle for the "{}\+Build Custom"{} button text. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{scene_8d_a780e652050603dd1bec287b3534d3bc7}{play\+Cust\+Rect}}
+\begin{DoxyCompactList}\small\item\em Rectangle for the "{}\+Play Custom"{} button. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{scene_8d_a208a506b4c4f3cf54ec214ed435480af}{play\+Cust\+Tex}}
+\begin{DoxyCompactList}\small\item\em Texture for the "{}\+Play Custom"{} button. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{scene_8d_ade93b74752d2f2d25af3dc98a2c8f2c8}{play\+Cust\+Text}}
+\begin{DoxyCompactList}\small\item\em Rectangle for the "{}\+Play Custom"{} button text. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{scene_8d_a06be91e1e5c36ca73e6a1b7df0ca73a9}{save\+Btn\+Rect}}
+\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{scene_8d_a9f7c6a3eac5bc17ebb3e673c73096cd6}{save\+Btn\+Tex}}
+\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{scene_8d_a2641f603b6029af048f56bec81b710b3}{save\+Text\+Rect}}
+\begin{DoxyCompactList}\small\item\em ditto \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{scene_8d_a108c9ab9ec0e3a634e5ad59ca05d2eb4}{templates}}
+\begin{DoxyCompactList}\small\item\em ditto \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{scene_8d_a8cd91817769808706ac8faecaa6aa0ec}{sel\+Template}}
+\item 
+int \mbox{\hyperlink{scene_8d_af49fdecbe9a228f12acba4d180708516}{popup\+Stage}}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{scene_8d_a3f004f690d903d61a301f5413ceae819}{current\+Flags}}
+\item 
+bool\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{scene_8d_a6231b4bbce39b647b47bbe02bc538b9d}{flags\+Selected}}
+\item 
+size\+\_\+t \mbox{\hyperlink{scene_8d_a1ecbd9c34cf08b6774343e394dd0dde1}{sel\+Flag}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{scene_8d_ac068fc0166eb41af93fecc45885cf7f1}\index{scene.d@{scene.d}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily \label{scene_8d_ac068fc0166eb41af93fecc45885cf7f1} 
+override void cleanup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Destroy button textures and font
+
+Cleanup textures and font \Hypertarget{scene_8d_a5de91005825c9105f869f5bacd02b7b8}\index{scene.d@{scene.d}!handleEvent@{handleEvent}}
+\index{handleEvent@{handleEvent}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}}
+{\footnotesize\ttfamily \label{scene_8d_a5de91005825c9105f869f5bacd02b7b8} 
+override void handle\+Event (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})}
+
+Handle input events on menu Selects and transitions to the corresponding scene
+
+Handle input for template/flag selection and placement \Hypertarget{scene_8d_a5bcd980457c642b1e214b7d04156bade}\index{scene.d@{scene.d}!makeBtn@{makeBtn}}
+\index{makeBtn@{makeBtn}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{makeBtn()}{makeBtn()}}
+{\footnotesize\ttfamily \label{scene_8d_a5bcd980457c642b1e214b7d04156bade} 
+void make\+Btn (\begin{DoxyParamCaption}\item[{ref SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}}]{btn\+Tex}{, }\item[{ref SDL\+\_\+\+Rect}]{txt\+Rect}{, }\item[{string}]{label}{, }\item[{SDL\+\_\+\+Rect}]{btn\+Rect}{}\end{DoxyParamCaption})}
+
+Helper to create a button texture \& text rectangle Params\+: btn\+Tex = Output texture pointer txt\+Rect = Output text SDL\+\_\+\+Rect label = Button label string btn\+Rect = Button bounding SDL\+\_\+\+Rect \Hypertarget{scene_8d_ac76e48ccba68ddc517c4ab6e30b1f7d9}\index{scene.d@{scene.d}!render@{render}}
+\index{render@{render}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{scene_8d_ac76e48ccba68ddc517c4ab6e30b1f7d9} 
+override void render (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})}
+
+Render the menu buttons
+
+Render editor UI and flag picker \Hypertarget{scene_8d_a2a80de60eb1bba8ca8b5be15ea5b2fbf}\index{scene.d@{scene.d}!saveScene@{saveScene}}
+\index{saveScene@{saveScene}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{saveScene()}{saveScene()}}
+{\footnotesize\ttfamily \label{scene_8d_a2a80de60eb1bba8ca8b5be15ea5b2fbf} 
+void save\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Serialize placed objects \& flags to JSON file \Hypertarget{scene_8d_ac73887c94870e8d5874dcf184526d453}\index{scene.d@{scene.d}!setCurrentFlags@{setCurrentFlags}}
+\index{setCurrentFlags@{setCurrentFlags}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{setCurrentFlags()}{setCurrentFlags()}}
+{\footnotesize\ttfamily \label{scene_8d_ac73887c94870e8d5874dcf184526d453} 
+void set\+Current\+Flags (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Initialize flags for the selected template \Hypertarget{scene_8d_aa8282e07b3588f21a8b10caac984f3ec}\index{scene.d@{scene.d}!setupScene@{setupScene}}
+\index{setupScene@{setupScene}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{setupScene()}{setupScene()}}
+{\footnotesize\ttfamily \label{scene_8d_aa8282e07b3588f21a8b10caac984f3ec} 
+void setup\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Setup the scene tree and background for the scene \Hypertarget{scene_8d_abf960f250836ceb4300bd059052801d2}\index{scene.d@{scene.d}!this@{this}}
+\index{this@{this}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{scene_8d_abf960f250836ceb4300bd059052801d2} 
+this (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_application}{Game\+Application}}}]{g}{}\end{DoxyParamCaption})}
+
+Construct the main menu scene Params\+: g = Parent \doxylink{class_game_application}{Game\+Application}
+
+Construct the editor scene Params\+: g = Parent \doxylink{class_game_application}{Game\+Application} \Hypertarget{scene_8d_aaa65052c6b5baaf7cdc3c35c3da85989}\index{scene.d@{scene.d}!update@{update}}
+\index{update@{update}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{scene_8d_aaa65052c6b5baaf7cdc3c35c3da85989} 
+override void update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})}
+
+No per-\/frame logic needed for menu
+
+No per-\/frame logic \Hypertarget{scene_8d_a82bd52df216cb0ac423592280022cbcf}\index{scene.d@{scene.d}!````~this@{\texorpdfstring{$\sim$}{\string~}this}}
+\index{````~this@{\texorpdfstring{$\sim$}{\string~}this}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}this()}{\string~this()}}
+{\footnotesize\ttfamily \label{scene_8d_a82bd52df216cb0ac423592280022cbcf} 
+\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{component_8d_a11639adc3b65ee2c5ad60f319580c40a}{this}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Destructor 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{scene_8d_aaf2bda8cc8b3d61b6fb9b3acd295f892}\index{scene.d@{scene.d}!buildCustRect@{buildCustRect}}
+\index{buildCustRect@{buildCustRect}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{buildCustRect}{buildCustRect}}
+{\footnotesize\ttfamily \label{scene_8d_aaf2bda8cc8b3d61b6fb9b3acd295f892} 
+SDL\+\_\+\+Rect build\+Cust\+Rect}
+
+
+
+Rectangle for the "{}\+Build Custom"{} button. 
+
+\Hypertarget{scene_8d_a14fe4b806aa7781db9bbb740727fdda1}\index{scene.d@{scene.d}!buildCustTex@{buildCustTex}}
+\index{buildCustTex@{buildCustTex}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{buildCustTex}{buildCustTex}}
+{\footnotesize\ttfamily \label{scene_8d_a14fe4b806aa7781db9bbb740727fdda1} 
+SDL\+\_\+\+Texture\texorpdfstring{$\ast$}{*} build\+Cust\+Tex}
+
+
+
+Texture for the "{}\+Build Custom"{} button. 
+
+\Hypertarget{scene_8d_a2538ef765a2f3a51f32446107a4b90b0}\index{scene.d@{scene.d}!buildCustText@{buildCustText}}
+\index{buildCustText@{buildCustText}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{buildCustText}{buildCustText}}
+{\footnotesize\ttfamily \label{scene_8d_a2538ef765a2f3a51f32446107a4b90b0} 
+SDL\+\_\+\+Rect build\+Cust\+Text}
+
+
+
+Rectangle for the "{}\+Build Custom"{} button text. 
+
+\Hypertarget{scene_8d_a3f004f690d903d61a301f5413ceae819}\index{scene.d@{scene.d}!currentFlags@{currentFlags}}
+\index{currentFlags@{currentFlags}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{currentFlags}{currentFlags}}
+{\footnotesize\ttfamily \label{scene_8d_a3f004f690d903d61a301f5413ceae819} 
+string \mbox{[}$\,$\mbox{]} current\+Flags}
+
+Flags for current template \Hypertarget{scene_8d_a6231b4bbce39b647b47bbe02bc538b9d}\index{scene.d@{scene.d}!flagsSelected@{flagsSelected}}
+\index{flagsSelected@{flagsSelected}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{flagsSelected}{flagsSelected}}
+{\footnotesize\ttfamily \label{scene_8d_a6231b4bbce39b647b47bbe02bc538b9d} 
+bool \mbox{[}$\,$\mbox{]} flags\+Selected}
+
+Which flags are active bitmask selection \Hypertarget{scene_8d_a6b71272d189668d2efdab3562c45e828}\index{scene.d@{scene.d}!font@{font}}
+\index{font@{font}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily \label{scene_8d_a6b71272d189668d2efdab3562c45e828} 
+\mbox{\hyperlink{class_game_scene}{Game\+Scene}} \texorpdfstring{$\ast$}{*} font}
+
+
+
+TTF Font that is used in scene. 
+
+Class Main\+Menu Presents buttons\+: Play Default, Build Custom, Play Custom
+
+Class Editor\+Scene Allows placement of \doxylink{class_game_object}{Game\+Object} templates with selectable flags Font for UI text \Hypertarget{scene_8d_a780e652050603dd1bec287b3534d3bc7}\index{scene.d@{scene.d}!playCustRect@{playCustRect}}
+\index{playCustRect@{playCustRect}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{playCustRect}{playCustRect}}
+{\footnotesize\ttfamily \label{scene_8d_a780e652050603dd1bec287b3534d3bc7} 
+SDL\+\_\+\+Rect play\+Cust\+Rect}
+
+
+
+Rectangle for the "{}\+Play Custom"{} button. 
+
+\Hypertarget{scene_8d_a208a506b4c4f3cf54ec214ed435480af}\index{scene.d@{scene.d}!playCustTex@{playCustTex}}
+\index{playCustTex@{playCustTex}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{playCustTex}{playCustTex}}
+{\footnotesize\ttfamily \label{scene_8d_a208a506b4c4f3cf54ec214ed435480af} 
+SDL\+\_\+\+Texture\texorpdfstring{$\ast$}{*} play\+Cust\+Tex}
+
+
+
+Texture for the "{}\+Play Custom"{} button. 
+
+\Hypertarget{scene_8d_ade93b74752d2f2d25af3dc98a2c8f2c8}\index{scene.d@{scene.d}!playCustText@{playCustText}}
+\index{playCustText@{playCustText}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{playCustText}{playCustText}}
+{\footnotesize\ttfamily \label{scene_8d_ade93b74752d2f2d25af3dc98a2c8f2c8} 
+SDL\+\_\+\+Rect play\+Cust\+Text}
+
+
+
+Rectangle for the "{}\+Play Custom"{} button text. 
+
+\Hypertarget{scene_8d_ab8a842fce227d5491cb06e0fae81ddb3}\index{scene.d@{scene.d}!playDefRect@{playDefRect}}
+\index{playDefRect@{playDefRect}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{playDefRect}{playDefRect}}
+{\footnotesize\ttfamily \label{scene_8d_ab8a842fce227d5491cb06e0fae81ddb3} 
+SDL\+\_\+\+Rect play\+Def\+Rect}
+
+
+
+Rectangle for the "{}\+Play"{} button. 
+
+\Hypertarget{scene_8d_a510ce7e92940e14963873f452ea527bd}\index{scene.d@{scene.d}!playDefTex@{playDefTex}}
+\index{playDefTex@{playDefTex}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{playDefTex}{playDefTex}}
+{\footnotesize\ttfamily \label{scene_8d_a510ce7e92940e14963873f452ea527bd} 
+SDL\+\_\+\+Texture\texorpdfstring{$\ast$}{*} play\+Def\+Tex}
+
+
+
+Texture for the "{}\+Play"{} button. 
+
+\Hypertarget{scene_8d_a42b0319a8d9090855990d0de58a7b207}\index{scene.d@{scene.d}!playDefText@{playDefText}}
+\index{playDefText@{playDefText}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{playDefText}{playDefText}}
+{\footnotesize\ttfamily \label{scene_8d_a42b0319a8d9090855990d0de58a7b207} 
+SDL\+\_\+\+Rect play\+Def\+Text}
+
+
+
+Rectangle for the "{}\+Play"{} button text. 
+
+\Hypertarget{scene_8d_af49fdecbe9a228f12acba4d180708516}\index{scene.d@{scene.d}!popupStage@{popupStage}}
+\index{popupStage@{popupStage}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{popupStage}{popupStage}}
+{\footnotesize\ttfamily \label{scene_8d_af49fdecbe9a228f12acba4d180708516} 
+int popup\+Stage}
+
+Mode\+: 0 = picking, 1 = placing \Hypertarget{scene_8d_a06be91e1e5c36ca73e6a1b7df0ca73a9}\index{scene.d@{scene.d}!saveBtnRect@{saveBtnRect}}
+\index{saveBtnRect@{saveBtnRect}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{saveBtnRect}{saveBtnRect}}
+{\footnotesize\ttfamily \label{scene_8d_a06be91e1e5c36ca73e6a1b7df0ca73a9} 
+SDL\+\_\+\+Rect save\+Btn\+Rect}
+
+"{}\+Save"{} button rect \& texture \Hypertarget{scene_8d_a9f7c6a3eac5bc17ebb3e673c73096cd6}\index{scene.d@{scene.d}!saveBtnTex@{saveBtnTex}}
+\index{saveBtnTex@{saveBtnTex}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{saveBtnTex}{saveBtnTex}}
+{\footnotesize\ttfamily \label{scene_8d_a9f7c6a3eac5bc17ebb3e673c73096cd6} 
+SDL\+\_\+\+Texture\texorpdfstring{$\ast$}{*} save\+Btn\+Tex}
+
+\Hypertarget{scene_8d_a2641f603b6029af048f56bec81b710b3}\index{scene.d@{scene.d}!saveTextRect@{saveTextRect}}
+\index{saveTextRect@{saveTextRect}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{saveTextRect}{saveTextRect}}
+{\footnotesize\ttfamily \label{scene_8d_a2641f603b6029af048f56bec81b710b3} 
+SDL\+\_\+\+Rect save\+Text\+Rect}
+
+
+
+ditto 
+
+\Hypertarget{scene_8d_a1ecbd9c34cf08b6774343e394dd0dde1}\index{scene.d@{scene.d}!selFlag@{selFlag}}
+\index{selFlag@{selFlag}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{selFlag}{selFlag}}
+{\footnotesize\ttfamily \label{scene_8d_a1ecbd9c34cf08b6774343e394dd0dde1} 
+size\+\_\+t sel\+Flag}
+
+Currently highlighted flag index \Hypertarget{scene_8d_a8cd91817769808706ac8faecaa6aa0ec}\index{scene.d@{scene.d}!selTemplate@{selTemplate}}
+\index{selTemplate@{selTemplate}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{selTemplate}{selTemplate}}
+{\footnotesize\ttfamily \label{scene_8d_a8cd91817769808706ac8faecaa6aa0ec} 
+size\+\_\+t sel\+Template}
+
+Currently highlighted template index \Hypertarget{scene_8d_a108c9ab9ec0e3a634e5ad59ca05d2eb4}\index{scene.d@{scene.d}!templates@{templates}}
+\index{templates@{templates}!scene.d@{scene.d}}
+\doxysubsubsection{\texorpdfstring{templates}{templates}}
+{\footnotesize\ttfamily \label{scene_8d_a108c9ab9ec0e3a634e5ad59ca05d2eb4} 
+string \mbox{[}$\,$\mbox{]} templates}
+
+
+
+ditto 
+
+Available template names 

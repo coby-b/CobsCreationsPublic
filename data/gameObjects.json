@@ -1,0 +1,45 @@
+{
+	"player": {
+		"texture": "player",
+		"width": 50,
+		"height": 50,
+		"script": "playerscript",
+		"flags": [
+			"BulletBounce",
+			"BulletSustain",
+			"BulletGrow",
+			"SpeedBoost",
+			"TripleShot",
+			"QuickReload"
+		]
+	},
+	"aliens": {
+		"texture": "aliens",
+		"width": 40,
+		"height": 40,
+		"script": "asteroidscript",
+		"flags": [
+			"Large",
+			"Small",
+			"SpeedBoost",
+			"SideToSide",
+			"UpDown"
+		]
+	},
+	"projectile": {
+		"texture": "projectile",
+		"width": 25,
+		"height": 25,
+		"script": "projectilescript",
+		"flags": [
+			"BulletBounce",
+			"BulletSustain",
+			"BulletGrow"
+		]
+	},
+	"background": {
+		"texture": "background",
+		"width": 1200,
+		"height": 800
+	}
+}

@@ -1,0 +1,96 @@
+\doxysection{resourcemanager Namespace Reference}
+\hypertarget{namespaceresourcemanager}{}\label{namespaceresourcemanager}\index{resourcemanager@{resourcemanager}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classresourcemanager_1_1_resource_manager}{Resource\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespaceresourcemanager_ad3ca397c021e6dcded1d362e0a09f497}\label{namespaceresourcemanager_ad3ca397c021e6dcded1d362e0a09f497} 
+{\bfseries SDL\+\_\+\+Free\+Surface} (surface)
+\item 
+\Hypertarget{namespaceresourcemanager_ae2316f69670fbfc32d320f1633ad4976}\label{namespaceresourcemanager_ae2316f69670fbfc32d320f1633ad4976} 
+{\bfseries if} (j.\+type !=JSONType.\+object)
+\item 
+\Hypertarget{namespaceresourcemanager_ad47af9d9cb57a18c9033bcf430c8838b}\label{namespaceresourcemanager_ad47af9d9cb57a18c9033bcf430c8838b} 
+{\bfseries if} ("{}tile\+Width"{} in j\mbox{[}"{}format"{}\mbox{]}.object \&\&"{}tile\+Height"{} in j\mbox{[}"{}format"{}\mbox{]}.object)
+\item 
+\Hypertarget{namespaceresourcemanager_af69b4d1dfafeeb28261435016def22d6}\label{namespaceresourcemanager_af69b4d1dfafeeb28261435016def22d6} 
+{\bfseries if} (is\+Animated)
+\item 
+\mbox{\hyperlink{namespaceresourcemanager_a80ecab5b15a1910619dd023bf460bf62}{\texorpdfstring{$\sim$}{\string~}this}} ()
+\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{namespaceresourcemanager_a43c7c302abeb4f7ab2a35d3490718900}{get\+Frame\+Rect}} (int frame\+Index)
+\item 
+void \mbox{\hyperlink{namespaceresourcemanager_af4248977a600ff03f777e1d9943e19fa}{load\+Animations}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespaceresourcemanager_aefd742fb20249de0ba1468bc66007dc9}\label{namespaceresourcemanager_aefd742fb20249de0ba1468bc66007dc9} 
+this. {\bfseries m\+Texture} = SDL\+\_\+\+Create\+Texture\+From\+Surface(renderer, surface)
+\item 
+\Hypertarget{namespaceresourcemanager_a3a784bd20b89ee51cb435248e3945fc9}\label{namespaceresourcemanager_a3a784bd20b89ee51cb435248e3945fc9} 
+string {\bfseries file\+Data} = read\+Text(data)
+\item 
+\Hypertarget{namespaceresourcemanager_ac72f54f15025aa5918e009e488ae2d5d}\label{namespaceresourcemanager_ac72f54f15025aa5918e009e488ae2d5d} 
+JSONValue {\bfseries j} = parse\+JSON(file\+Data)
+\item 
+\Hypertarget{namespaceresourcemanager_a6e8ffd0c1a6a11a120f8423b5e6597aa}\label{namespaceresourcemanager_a6e8ffd0c1a6a11a120f8423b5e6597aa} 
+this. {\bfseries width} = cast(int) j\mbox{[}"{}format"{}\mbox{]}\mbox{[}"{}width"{}\mbox{]}.integer
+\item 
+\Hypertarget{namespaceresourcemanager_a47d84ff7c3ea33c2559d7676c4b6e256}\label{namespaceresourcemanager_a47d84ff7c3ea33c2559d7676c4b6e256} 
+this. {\bfseries height} = cast(int) j\mbox{[}"{}format"{}\mbox{]}\mbox{[}"{}height"{}\mbox{]}.integer
+\item 
+\mbox{\hyperlink{namespaceresourcemanager_ace82922618797aea4c830e580a961e8f}{else}}
+\item 
+\Hypertarget{namespaceresourcemanager_a7f13bde5b28e84dfeb50cb8369645331}\label{namespaceresourcemanager_a7f13bde5b28e84dfeb50cb8369645331} 
+{\bfseries tile\+\_\+height} = height
+\item 
+\Hypertarget{namespaceresourcemanager_a7d940d9db739d744423f0355f9484639}\label{namespaceresourcemanager_a7d940d9db739d744423f0355f9484639} 
+{\bfseries columns} = 1
+\item 
+\Hypertarget{namespaceresourcemanager_af70f075bcb69fc520ecf74902af1c0eb}\label{namespaceresourcemanager_af70f075bcb69fc520ecf74902af1c0eb} 
+{\bfseries is\+Animated} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+file resourcemanager.\+d Loads and caches Sprites (textures + frame data) 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceresourcemanager_a43c7c302abeb4f7ab2a35d3490718900}\index{resourcemanager@{resourcemanager}!getFrameRect@{getFrameRect}}
+\index{getFrameRect@{getFrameRect}!resourcemanager@{resourcemanager}}
+\doxysubsubsection{\texorpdfstring{getFrameRect()}{getFrameRect()}}
+{\footnotesize\ttfamily \label{namespaceresourcemanager_a43c7c302abeb4f7ab2a35d3490718900} 
+SDL\+\_\+\+Rect resourcemanager\+::get\+Frame\+Rect (\begin{DoxyParamCaption}\item[{int}]{frame\+Index}{}\end{DoxyParamCaption})}
+
+Compute the source rectangle for a given frame index Params\+: frame\+Index = Index in the frame array Returns\+: Corresponding SDL\+\_\+\+Rect \Hypertarget{namespaceresourcemanager_af4248977a600ff03f777e1d9943e19fa}\index{resourcemanager@{resourcemanager}!loadAnimations@{loadAnimations}}
+\index{loadAnimations@{loadAnimations}!resourcemanager@{resourcemanager}}
+\doxysubsubsection{\texorpdfstring{loadAnimations()}{loadAnimations()}}
+{\footnotesize\ttfamily \label{namespaceresourcemanager_af4248977a600ff03f777e1d9943e19fa} 
+void resourcemanager\+::load\+Animations (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Build the full m\+Frames array \Hypertarget{namespaceresourcemanager_a80ecab5b15a1910619dd023bf460bf62}\index{resourcemanager@{resourcemanager}!````~this@{\texorpdfstring{$\sim$}{\string~}this}}
+\index{````~this@{\texorpdfstring{$\sim$}{\string~}this}!resourcemanager@{resourcemanager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}this()}{\string~this()}}
+{\footnotesize\ttfamily \label{namespaceresourcemanager_a80ecab5b15a1910619dd023bf460bf62} 
+resourcemanager\+::\texorpdfstring{$\sim$}{\string~}this (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Destructor 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceresourcemanager_ace82922618797aea4c830e580a961e8f}\index{resourcemanager@{resourcemanager}!else@{else}}
+\index{else@{else}!resourcemanager@{resourcemanager}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \label{namespaceresourcemanager_ace82922618797aea4c830e580a961e8f} 
+resourcemanager\+::else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ tile\_width\ =\ width}
+
+\end{DoxyCode}

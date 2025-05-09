@@ -1,0 +1,54 @@
+\doxysection{source/scenetree.d File Reference}
+\hypertarget{scenetree_8d}{}\label{scenetree_8d}\index{source/scenetree.d@{source/scenetree.d}}
+{\ttfamily import gameobject;}\newline
+{\ttfamily import gameapplication;}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_scene_object}{Scene\+Object}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{scenetree_8d_a503161e4762fb6b45f6a30f7dc5b867a}{this}} ()
+\item 
+void \mbox{\hyperlink{scenetree_8d_a7b3a0d8a592ace73b23fa1b81102f7ce}{add\+Object}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} obj)
+\item 
+void \mbox{\hyperlink{scenetree_8d_a514f4ffaa84658160682b5e1988566ad}{traverse\+Tree}} (void delegate(\mbox{\hyperlink{class_game_object}{Game\+Object}}) func)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_scene_object}{Scene\+Object}} \mbox{\hyperlink{scenetree_8d_abc3be4ebdca579225f6e6b938b32cffc}{root\+Object}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{scenetree_8d_a7b3a0d8a592ace73b23fa1b81102f7ce}\index{scenetree.d@{scenetree.d}!addObject@{addObject}}
+\index{addObject@{addObject}!scenetree.d@{scenetree.d}}
+\doxysubsubsection{\texorpdfstring{addObject()}{addObject()}}
+{\footnotesize\ttfamily \label{scenetree_8d_a7b3a0d8a592ace73b23fa1b81102f7ce} 
+void add\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}}}]{obj}{}\end{DoxyParamCaption})}
+
+Add a \doxylink{class_game_object}{Game\+Object} to the root of the scene graph Params\+: obj = \doxylink{class_game_object}{Game\+Object} to add \Hypertarget{scenetree_8d_a503161e4762fb6b45f6a30f7dc5b867a}\index{scenetree.d@{scenetree.d}!this@{this}}
+\index{this@{this}!scenetree.d@{scenetree.d}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{scenetree_8d_a503161e4762fb6b45f6a30f7dc5b867a} 
+this (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Construct an empty Scene\+Tree with a null root \Hypertarget{scenetree_8d_a514f4ffaa84658160682b5e1988566ad}\index{scenetree.d@{scenetree.d}!traverseTree@{traverseTree}}
+\index{traverseTree@{traverseTree}!scenetree.d@{scenetree.d}}
+\doxysubsubsection{\texorpdfstring{traverseTree()}{traverseTree()}}
+{\footnotesize\ttfamily \label{scenetree_8d_a514f4ffaa84658160682b5e1988566ad} 
+void traverse\+Tree (\begin{DoxyParamCaption}\item[{void delegate(\mbox{\hyperlink{class_game_object}{Game\+Object}})}]{func}{}\end{DoxyParamCaption})}
+
+Traverse every \doxylink{class_game_object}{Game\+Object} in the scene graph Params\+: func = Delegate to invoke on each \doxylink{class_game_object}{Game\+Object} 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{scenetree_8d_abc3be4ebdca579225f6e6b938b32cffc}\index{scenetree.d@{scenetree.d}!rootObject@{rootObject}}
+\index{rootObject@{rootObject}!scenetree.d@{scenetree.d}}
+\doxysubsubsection{\texorpdfstring{rootObject}{rootObject}}
+{\footnotesize\ttfamily \label{scenetree_8d_abc3be4ebdca579225f6e6b938b32cffc} 
+class \mbox{\hyperlink{class_scene_object}{Scene\+Object}} root\+Object}
+
+Class Scene\+Tree Holds all \doxylink{class_scene_object}{Scene\+Object} nodes under a dummy root for scene traversal Dummy root node whose obj is always null 

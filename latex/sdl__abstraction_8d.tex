@@ -1,0 +1,43 @@
+\doxysection{source/sdl\+\_\+abstraction.d File Reference}
+\hypertarget{sdl__abstraction_8d}{}\label{sdl__abstraction_8d}\index{source/sdl\_abstraction.d@{source/sdl\_abstraction.d}}
+{\ttfamily import loader;}\newline
+{\ttfamily import bindbc.\+loader.\+sharedlib;}\newline
+{\ttfamily import bindbc.\+sdl;}\newline
+{\ttfamily import std.\+string;}\newline
+{\ttfamily import std.\+stdio;}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static shared \mbox{\hyperlink{sdl__abstraction_8d_a1ac86d4b5cb9751fec59f282c327cebe}{this}} ()
+\item 
+static shared \mbox{\hyperlink{sdl__abstraction_8d_a541735bc156b10001581252f1c5d61f1}{\texorpdfstring{$\sim$}{\string~}this}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const SDLSupport \mbox{\hyperlink{sdl__abstraction_8d_a106473ee1fb1b5d083c7ab16a3a40275}{ret}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{sdl__abstraction_8d_a1ac86d4b5cb9751fec59f282c327cebe}\index{sdl\_abstraction.d@{sdl\_abstraction.d}!this@{this}}
+\index{this@{this}!sdl\_abstraction.d@{sdl\_abstraction.d}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{sdl__abstraction_8d_a1ac86d4b5cb9751fec59f282c327cebe} 
+static shared this (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+At the module level we perform any initialization before our program executes. Effectively, what I want to do here is make sure that the SDL library successfully initializes. \Hypertarget{sdl__abstraction_8d_a541735bc156b10001581252f1c5d61f1}\index{sdl\_abstraction.d@{sdl\_abstraction.d}!````~this@{\texorpdfstring{$\sim$}{\string~}this}}
+\index{````~this@{\texorpdfstring{$\sim$}{\string~}this}!sdl\_abstraction.d@{sdl\_abstraction.d}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}this()}{\string~this()}}
+{\footnotesize\ttfamily \label{sdl__abstraction_8d_a541735bc156b10001581252f1c5d61f1} 
+static shared \texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{component_8d_a11639adc3b65ee2c5ad60f319580c40a}{this}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+At the module level, when we terminate, we make sure to terminate SDL, which is initialized at the start of the application. 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{sdl__abstraction_8d_a106473ee1fb1b5d083c7ab16a3a40275}\index{sdl\_abstraction.d@{sdl\_abstraction.d}!ret@{ret}}
+\index{ret@{ret}!sdl\_abstraction.d@{sdl\_abstraction.d}}
+\doxysubsubsection{\texorpdfstring{ret}{ret}}
+{\footnotesize\ttfamily \label{sdl__abstraction_8d_a106473ee1fb1b5d083c7ab16a3a40275} 
+const SDLSupport ret}
+

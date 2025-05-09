@@ -1,0 +1,87 @@
+\doxysection{Projectile\+Script Class Reference}
+\hypertarget{class_projectile_script}{}\label{class_projectile_script}\index{ProjectileScript@{ProjectileScript}}
+Inheritance diagram for Projectile\+Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_projectile_script}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projectile_script_a5b6db8edf1a6e611fc0469d649eeb1e2}{this}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} owner)
+\item 
+override void \mbox{\hyperlink{class_projectile_script_a88041489e63a0c51ff14b0e6e27611a9}{update}} (float delta\+Time)
+\item 
+override void \mbox{\hyperlink{class_projectile_script_a67da23961e76d232a60b3e0da889ab4d}{input}} (SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}event, float delta\+Time)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structvec2d}{vec2d}} \mbox{\hyperlink{class_projectile_script_aa41c66c88450f30de01c37e76628a25f}{velocity}}
+\item 
+float \mbox{\hyperlink{class_projectile_script_aefc4b74bace54dde86bf31f641bc8135}{life}} = 2.\+0f
+\item 
+bool \mbox{\hyperlink{class_projectile_script_ac8f3ed7592bdab8250041ae3358063cc}{grow}} = false
+\item 
+bool \mbox{\hyperlink{class_projectile_script_aa9d01e8e7fb5e9d3e24bcf1e599ba288}{bounce}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{class_projectile_script}{Projectile\+Script} Controls a projectile\textquotesingle{}s velocity, lifespan, growth, and bouncing 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_projectile_script_a5b6db8edf1a6e611fc0469d649eeb1e2}\index{ProjectileScript@{ProjectileScript}!this@{this}}
+\index{this@{this}!ProjectileScript@{ProjectileScript}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{class_projectile_script_a5b6db8edf1a6e611fc0469d649eeb1e2} 
+Projectile\+Script\+::this (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}}}]{owner}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Construct a \doxylink{class_projectile_script}{Projectile\+Script}, adjusting behavior based on flags Params\+: owner = The \doxylink{class_game_object}{Game\+Object} this script is attached to 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_projectile_script_a67da23961e76d232a60b3e0da889ab4d}\index{ProjectileScript@{ProjectileScript}!input@{input}}
+\index{input@{input}!ProjectileScript@{ProjectileScript}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily \label{class_projectile_script_a67da23961e76d232a60b3e0da889ab4d} 
+override void Projectile\+Script\+::input (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}}]{event}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Input is not used for projectiles Params\+: event = Pointer to SDL\+\_\+\+Event delta\+Time = Time since last frame \Hypertarget{class_projectile_script_a88041489e63a0c51ff14b0e6e27611a9}\index{ProjectileScript@{ProjectileScript}!update@{update}}
+\index{update@{update}!ProjectileScript@{ProjectileScript}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_projectile_script_a88041489e63a0c51ff14b0e6e27611a9} 
+override void Projectile\+Script\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Update projectile position, handle growth, bouncing, and expiration Params\+: delta\+Time = Time elapsed since last frame 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_projectile_script_aa9d01e8e7fb5e9d3e24bcf1e599ba288}\index{ProjectileScript@{ProjectileScript}!bounce@{bounce}}
+\index{bounce@{bounce}!ProjectileScript@{ProjectileScript}}
+\doxysubsubsection{\texorpdfstring{bounce}{bounce}}
+{\footnotesize\ttfamily \label{class_projectile_script_aa9d01e8e7fb5e9d3e24bcf1e599ba288} 
+bool Projectile\+Script\+::bounce = false\hspace{0.3cm}{\ttfamily [private]}}
+
+Bounce off world edges if true \Hypertarget{class_projectile_script_ac8f3ed7592bdab8250041ae3358063cc}\index{ProjectileScript@{ProjectileScript}!grow@{grow}}
+\index{grow@{grow}!ProjectileScript@{ProjectileScript}}
+\doxysubsubsection{\texorpdfstring{grow}{grow}}
+{\footnotesize\ttfamily \label{class_projectile_script_ac8f3ed7592bdab8250041ae3358063cc} 
+bool Projectile\+Script\+::grow = false\hspace{0.3cm}{\ttfamily [private]}}
+
+Grow in size over time if true \Hypertarget{class_projectile_script_aefc4b74bace54dde86bf31f641bc8135}\index{ProjectileScript@{ProjectileScript}!life@{life}}
+\index{life@{life}!ProjectileScript@{ProjectileScript}}
+\doxysubsubsection{\texorpdfstring{life}{life}}
+{\footnotesize\ttfamily \label{class_projectile_script_aefc4b74bace54dde86bf31f641bc8135} 
+float Projectile\+Script\+::life = 2.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+Remaining life time in seconds \Hypertarget{class_projectile_script_aa41c66c88450f30de01c37e76628a25f}\index{ProjectileScript@{ProjectileScript}!velocity@{velocity}}
+\index{velocity@{velocity}!ProjectileScript@{ProjectileScript}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily \label{class_projectile_script_aa41c66c88450f30de01c37e76628a25f} 
+\mbox{\hyperlink{structvec2d}{vec2d}} Projectile\+Script\+::velocity\hspace{0.3cm}{\ttfamily [private]}}
+
+Current velocity vector 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/scripts/\mbox{\hyperlink{projectilescript_8d}{projectilescript.\+d}}\end{DoxyCompactItemize}

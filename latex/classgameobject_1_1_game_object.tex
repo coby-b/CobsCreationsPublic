@@ -1,0 +1,132 @@
+\doxysection{gameobject\+::Game\+Object Class Reference}
+\hypertarget{classgameobject_1_1_game_object}{}\label{classgameobject_1_1_game_object}\index{gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgameobject_1_1_game_object_af9e426be08ae68a02c7f2e8a34fe6baf}{this}} (Game\+Application game, int obj\+ID, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, string name, float x, float y, float w, float h, string script, int mask)
+\item 
+\mbox{\hyperlink{classgameobject_1_1_game_object_a9a159c40d5105af7ff81117ed977e1f3}{\texorpdfstring{$\sim$}{\string~}this}} ()
+\item 
+void \mbox{\hyperlink{classgameobject_1_1_game_object_afadaaa4fd55bdcd2db74355ba9053650}{Input}} (SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}event, float delta\+Time)
+\item 
+void \mbox{\hyperlink{classgameobject_1_1_game_object_a26ea9193af13e5ce494363d6df3b2add}{Update}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{classgameobject_1_1_game_object_a266378a5fcb945414ecb74d590972b41}{Render}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, float delta\+Time, Camera camera)
+\item 
+bool \mbox{\hyperlink{classgameobject_1_1_game_object_a2c336555bc5ed087cffa67a736f808cc}{has\+Flag}} (string flag\+Name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Application \mbox{\hyperlink{classgameobject_1_1_game_object_a6dc8a2f58c7bae98b1f9c8c3f2565e4d}{Game\+Ref}}
+\item 
+bool \mbox{\hyperlink{classgameobject_1_1_game_object_a6a524f29db4f21e9eac8c4744f0127cc}{m\+Active}}
+\item 
+IComponent\mbox{[}COMPONENTS\mbox{]} \mbox{\hyperlink{classgameobject_1_1_game_object_aa1df9ff18fb17e7b395ec4139b0e88dd}{m\+Components}}
+\item 
+string \mbox{\hyperlink{classgameobject_1_1_game_object_a6a2c6d03cb7fbbefd5974ff9876d2f7e}{m\+Name}}
+\item 
+int \mbox{\hyperlink{classgameobject_1_1_game_object_a8be36491d2afc25d60d2b32de9b19190}{m\+ID}}
+\item 
+\Hypertarget{classgameobject_1_1_game_object_a6ec1017232711b529c9e0506180fa26e}\label{classgameobject_1_1_game_object_a6ec1017232711b529c9e0506180fa26e} 
+string {\bfseries next\+Animation} = "{}"{}
+\item 
+string \mbox{\hyperlink{classgameobject_1_1_game_object_a8f9f2749f956209006ba518429be357e}{m\+Script\+Name}}
+\item 
+int \mbox{\hyperlink{classgameobject_1_1_game_object_a0d6677973bf096b5956f7f8eeab6d749}{m\+Flag\+Mask}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{classgameobject_1_1_game_object}{Game\+Object} A drawable, updatable entity composed of components 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classgameobject_1_1_game_object_af9e426be08ae68a02c7f2e8a34fe6baf}\index{gameobject::GameObject@{gameobject::GameObject}!this@{this}}
+\index{this@{this}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{this()}{this()}}
+{\footnotesize\ttfamily \label{classgameobject_1_1_game_object_af9e426be08ae68a02c7f2e8a34fe6baf} 
+gameobject\+::\+Game\+Object\+::this (\begin{DoxyParamCaption}\item[{Game\+Application}]{game}{, }\item[{int}]{obj\+ID}{, }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer}{, }\item[{string}]{name}{, }\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{w}{, }\item[{float}]{h}{, }\item[{string}]{script}{, }\item[{int}]{mask}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \doxylink{classgameobject_1_1_game_object}{Game\+Object} Params\+: game = Application reference obj\+ID = Unique ID renderer = SDL renderer name = Template key x = X Position y = Y Position w = Width h = Height script = Script key mask = Flags bitmask. \Hypertarget{classgameobject_1_1_game_object_a9a159c40d5105af7ff81117ed977e1f3}\index{gameobject::GameObject@{gameobject::GameObject}!````~this@{\texorpdfstring{$\sim$}{\string~}this}}
+\index{````~this@{\texorpdfstring{$\sim$}{\string~}this}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}this()}{\string~this()}}
+{\footnotesize\ttfamily \label{classgameobject_1_1_game_object_a9a159c40d5105af7ff81117ed977e1f3} 
+gameobject\+::\+Game\+Object\+::\texorpdfstring{$\sim$}{\string~}this (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgameobject_1_1_game_object_a2c336555bc5ed087cffa67a736f808cc}\index{gameobject::GameObject@{gameobject::GameObject}!hasFlag@{hasFlag}}
+\index{hasFlag@{hasFlag}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{hasFlag()}{hasFlag()}}
+{\footnotesize\ttfamily \label{classgameobject_1_1_game_object_a2c336555bc5ed087cffa67a736f808cc} 
+bool gameobject\+::\+Game\+Object\+::has\+Flag (\begin{DoxyParamCaption}\item[{string}]{flag\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if a named flag is set on this object Params\+: flag\+Name = Name of the flag Returns\+: True if set \Hypertarget{classgameobject_1_1_game_object_afadaaa4fd55bdcd2db74355ba9053650}\index{gameobject::GameObject@{gameobject::GameObject}!Input@{Input}}
+\index{Input@{Input}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily \label{classgameobject_1_1_game_object_afadaaa4fd55bdcd2db74355ba9053650} 
+void gameobject\+::\+Game\+Object\+::\+Input (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event \texorpdfstring{$\ast$}{*}}]{event}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Handle input event for this object Params\+: event = SDL\+\_\+\+Event pointer delta\+Time = Seconds since last frame \Hypertarget{classgameobject_1_1_game_object_a266378a5fcb945414ecb74d590972b41}\index{gameobject::GameObject@{gameobject::GameObject}!Render@{Render}}
+\index{Render@{Render}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily \label{classgameobject_1_1_game_object_a266378a5fcb945414ecb74d590972b41} 
+void gameobject\+::\+Game\+Object\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer}{, }\item[{float}]{delta\+Time}{, }\item[{Camera}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Render via its texture/animation component Params\+: renderer = SDL\+\_\+\+Renderer pointer delta\+Time = Seconds since last frame camera = Camera for world→screen transform \Hypertarget{classgameobject_1_1_game_object_a26ea9193af13e5ce494363d6df3b2add}\index{gameobject::GameObject@{gameobject::GameObject}!Update@{Update}}
+\index{Update@{Update}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{classgameobject_1_1_game_object_a26ea9193af13e5ce494363d6df3b2add} 
+void gameobject\+::\+Game\+Object\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Update this object’s state Params\+: delta\+Time = Seconds since last frame 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classgameobject_1_1_game_object_a6dc8a2f58c7bae98b1f9c8c3f2565e4d}\index{gameobject::GameObject@{gameobject::GameObject}!GameRef@{GameRef}}
+\index{GameRef@{GameRef}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{GameRef}{GameRef}}
+{\footnotesize\ttfamily \label{classgameobject_1_1_game_object_a6dc8a2f58c7bae98b1f9c8c3f2565e4d} 
+Game\+Application gameobject\+::\+Game\+Object\+::\+Game\+Ref}
+
+Back‐reference to the application \Hypertarget{classgameobject_1_1_game_object_a6a524f29db4f21e9eac8c4744f0127cc}\index{gameobject::GameObject@{gameobject::GameObject}!mActive@{mActive}}
+\index{mActive@{mActive}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{mActive}{mActive}}
+{\footnotesize\ttfamily \label{classgameobject_1_1_game_object_a6a524f29db4f21e9eac8c4744f0127cc} 
+bool gameobject\+::\+Game\+Object\+::m\+Active}
+
+Is the object active? \Hypertarget{classgameobject_1_1_game_object_aa1df9ff18fb17e7b395ec4139b0e88dd}\index{gameobject::GameObject@{gameobject::GameObject}!mComponents@{mComponents}}
+\index{mComponents@{mComponents}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{mComponents}{mComponents}}
+{\footnotesize\ttfamily \label{classgameobject_1_1_game_object_aa1df9ff18fb17e7b395ec4139b0e88dd} 
+IComponent \mbox{[}COMPONENTS\mbox{]} gameobject\+::\+Game\+Object\+::m\+Components}
+
+Array of attached components \Hypertarget{classgameobject_1_1_game_object_a0d6677973bf096b5956f7f8eeab6d749}\index{gameobject::GameObject@{gameobject::GameObject}!mFlagMask@{mFlagMask}}
+\index{mFlagMask@{mFlagMask}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{mFlagMask}{mFlagMask}}
+{\footnotesize\ttfamily \label{classgameobject_1_1_game_object_a0d6677973bf096b5956f7f8eeab6d749} 
+int gameobject\+::\+Game\+Object\+::m\+Flag\+Mask}
+
+Bitmask of flags \Hypertarget{classgameobject_1_1_game_object_a8be36491d2afc25d60d2b32de9b19190}\index{gameobject::GameObject@{gameobject::GameObject}!mID@{mID}}
+\index{mID@{mID}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{mID}{mID}}
+{\footnotesize\ttfamily \label{classgameobject_1_1_game_object_a8be36491d2afc25d60d2b32de9b19190} 
+int gameobject\+::\+Game\+Object\+::m\+ID}
+
+Unique object ID \Hypertarget{classgameobject_1_1_game_object_a6a2c6d03cb7fbbefd5974ff9876d2f7e}\index{gameobject::GameObject@{gameobject::GameObject}!mName@{mName}}
+\index{mName@{mName}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{mName}{mName}}
+{\footnotesize\ttfamily \label{classgameobject_1_1_game_object_a6a2c6d03cb7fbbefd5974ff9876d2f7e} 
+string gameobject\+::\+Game\+Object\+::m\+Name}
+
+Template name \Hypertarget{classgameobject_1_1_game_object_a8f9f2749f956209006ba518429be357e}\index{gameobject::GameObject@{gameobject::GameObject}!mScriptName@{mScriptName}}
+\index{mScriptName@{mScriptName}!gameobject::GameObject@{gameobject::GameObject}}
+\doxysubsubsection{\texorpdfstring{mScriptName}{mScriptName}}
+{\footnotesize\ttfamily \label{classgameobject_1_1_game_object_a8f9f2749f956209006ba518429be357e} 
+string gameobject\+::\+Game\+Object\+::m\+Script\+Name}
+
+Script component name. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/gameobject.\+d\end{DoxyCompactItemize}

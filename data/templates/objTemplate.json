@@ -1,0 +1,21 @@
+{
+    "title": "objTemplate",
+    "type": "object",
+    "definitions": {
+        "template": {
+            "type": "object",
+            "properties": {
+                "texture":    { "type": "string" },
+                "width":      { "type": "number" },
+                "height":     { "type": "number" },
+                "script":     { "type": "string" },
+                "flags":      { 
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "default": []
+                }
+            },
+            "required": ["texture","width","height"]
+        }
+    }
+}
