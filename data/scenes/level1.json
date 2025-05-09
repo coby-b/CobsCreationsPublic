@@ -11,7 +11,7 @@
 		"x": 600,
 		"y": 400,
 		"script": "playerscript",
-		"flags": 63
+		"flags": 40
 	},
 	{
 		"template": "aliens",
